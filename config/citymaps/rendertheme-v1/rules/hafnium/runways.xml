@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- ways -->
+    <rule e="way" k="*" v="*">
+        <!-- runways casings and areas -->
+        <rule e="way" k="aeroway" v="*">
+            <rule closed="yes" e="way" k="aeroway" v="aerodrome">
+                <class id="98"/>
+            </rule>
+            <rule e="way" k="aeroway" v="apron">
+                <class id="99"/>
+            </rule>
+            <rule e="way" k="aeroway" v="terminal">
+                <class id="100"/>
+            </rule>
+            <rule e="way" k="aeroway" v="runway">
+                <class id="101"/>
+            </rule>
+            <rule e="way" k="aeroway" v="taxiway">
+                <class id="102"/>
+            </rule>
+        </rule>
+    </rule>
+</rules>

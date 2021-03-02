@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- nodes -->
+    <rule e="node" k="*" v="*">
+        <!-- amenity -->
+        <rule e="node" k="amenity" v="*">
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="280">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- historic -->
+        <rule e="node" k="historic" v="*" zoom-min="15">
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="286">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <class id="285"/>
+        </rule>
+        <!-- man_made -->
+        <rule e="node" k="man_made" v="windmill" zoom-min="17">
+            <class id="289"/>
+        </rule>
+        <!-- natural -->
+        <rule e="node" k="natural" v="*">
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="295">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- shop -->
+        <rule e="node" k="shop" v="*">
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="309">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- tourism -->
+        <rule e="node" k="tourism" v="*">
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="315">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+    </rule>
+</rules>

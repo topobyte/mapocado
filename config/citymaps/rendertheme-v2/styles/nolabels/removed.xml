@@ -1,0 +1,253 @@
+    <class id="303" zoom-min="14">
+        <caption dy="-10" fill="#ec2d2d" font-size="13" font-style="bold" k="name" stroke="#ffffff" stroke-width="3.0"/>
+    </class>
+    <class id="126" zoom-min="17">
+        <caption tag="building" fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="198" zoom-min="16">
+        <caption fill="#000000" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="103" zoom-min="16">
+        <caption fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="na-all" zoom-min="16">
+        <caption fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="le-all" zoom-min="16">
+        <caption fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="to-all" zoom-min="16">
+        <caption tag="tourism" fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+
+    <class id="41" zoom-min="17">
+        <symbol src="parking.bvg" height="16"/>
+    </class>
+    <class id="lu-all" zoom-min="16">
+        <caption fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="forest-all" zoom-min="16">
+        <caption fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="44" zoom-min="15">
+        <symbol src="hospital.bvg" height="18"/>
+    </class>
+    <class id="45" zoom-min="17">
+        <symbol src="theatre.bvg" height="18"/>
+    </class>
+    <class id="46" zoom-min="17">
+        <symbol src="toilets.bvg" height="16"/>
+    </class>
+    <class id="47" zoom-min="17">
+        <caption tag="amenity" fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="sp-1" zoom-min="17">
+        <symbol src="soccer.png"/>
+    </class>
+    <class id="sp-4" zoom-min="17">
+        <symbol src="tennis.png"/>
+    </class>
+
+    <class id="246" zoom-min="17">
+        <caption tag="historic" fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="247" zoom-min="17">
+        <caption fill="#000000" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="248" zoom-min="17">
+        <symbol src="helicopter.bvg" height="30"/>
+    </class>
+    <class id="249" zoom-max="13">
+        <symbol src="airport.bvg" height="20"/>
+    </class>
+    <class id="250" zoom-min="17">
+        <symbol src="atm2.bvg" height="16"/>
+    </class>
+    <class id="251" zoom-min="17">
+        <symbol src="bank.bvg" height="18"/>
+    </class>
+    <class id="253" zoom-min="17">
+        <symbol src="rental_bicycle.bvg" height="16"/>
+    </class>
+    <class id="254" zoom-min="17">
+        <symbol src="bus_station.bvg" height="18"/>
+    </class>
+    <class id="255" zoom-min="17">
+        <symbol src="cafe.bvg" height="18"/>
+    </class>
+    <class id="256" zoom-min="17">
+        <symbol src="cinema2.bvg" height="18"/>
+    </class>
+    <class id="257" zoom-min="17">
+        <symbol src="fastfood.bvg" height="18"/>
+    </class>
+    <class id="258" zoom-min="17">
+        <symbol src="firestation.bvg" height="18"/>
+    </class>
+    <class id="260" zoom-min="17">
+        <symbol src="fuel.bvg" height="18"/>
+    </class>
+    <class id="261" zoom-min="15">
+        <symbol src="hospital.bvg" height="18"/>
+    </class>
+    <class id="262" zoom-min="17">
+        <symbol src="nursery.bvg" height="18"/>
+    </class>
+    <class id="263" zoom-min="17">
+        <symbol src="library.bvg" height="18"/>
+    </class>
+    <class id="264" zoom-min="17">
+        <symbol src="parking.bvg" height="16"/>
+    </class>
+    <class id="265" zoom-min="17">
+        <symbol src="pharmacy.bvg" height="18"/>
+    </class>
+    <class id="266" zoom-min="17">
+        <symbol src="jewish.bvg" height="18"/>
+    </class>
+    <class id="267" zoom-min="17">
+        <symbol src="islamic.bvg" height="18"/>
+    </class>
+    <class id="268" zoom-min="17">
+        <symbol src="christian.bvg" height="18"/>
+    </class>
+    <class id="269" zoom-min="17">
+        <symbol src="post_box.bvg" height="14"/>
+    </class>
+    <class id="270" zoom-min="17">
+        <symbol src="post_office.bvg" height="16"/>
+    </class>
+    <class id="271" zoom-min="17">
+        <symbol src="bar.bvg" height="18"/>
+    </class>
+    <class id="272" zoom-min="17">
+        <symbol src="recycling.bvg" reight="16"/>
+    </class>
+    <class id="273" zoom-min="17">
+        <symbol src="restaurant.bvg" height="18"/>
+    </class>
+    <class id="274" zoom-min="17">
+        <symbol src="school.bvg" height="18"/>
+    </class>
+    <class id="275" zoom-min="17">
+        <symbol src="shelter2.bvg" height="16"/>
+    </class>
+    <class id="276" zoom-min="17">
+        <symbol src="telephone.bvg" height="16"/>
+    </class>
+    <class id="277" zoom-min="17">
+        <symbol src="theatre.bvg" height="18"/>
+    </class>
+    <class id="278" zoom-min="17">
+        <symbol src="toilets.bvg" height="16"/>
+    </class>
+    <class id="279" zoom-min="17">
+        <symbol src="university.bvg" height="18"/>
+    </class>
+    <class id="280" zoom-min="17">
+        <caption tag="amenity" fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="281" zoom-min="16">
+        <circle fill="#707070" r="1.5"/>
+    </class>
+    <class id="282" zoom-min="16">
+        <symbol src="bus.bvg" height="18"/>
+    </class>
+
+    <class id="284" zoom-min="14">
+        <circle fill="#ffffff" r="1.4" scale-radius="true"/>
+    </class>
+    <class id="285" zoom-min="15">
+        <circle fill="#4040ff" r="3" stroke="#606060" stroke-width="1.5"/>
+    </class>
+    <class id="286" zoom-min="17">
+        <caption tag="historic" dy="-10" fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="288" zoom-min="17">
+        <symbol src="playground.bvg" height="18"/>
+    </class>
+    <class id="le-play" zoom-min="17">
+        <symbol src="playground.bvg" height="18"/>
+    </class>
+    <class id="289" zoom-min="17">
+        <symbol src="windmill.bvg" height="18"/>
+    </class>
+    <class id="290" zoom-min="15">
+        <symbol src="cave_entrance.bvg" height="16"/>
+    </class>
+
+    <class id="291" zoom-min="12">
+        <symbol src="peak.bvg" height="12"/>
+    </class>
+    <class id="292" zoom-min="12">
+        <caption dy="20" fill="#000000" font-size="10" font-style="bold" k="ele" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="294" zoom-min="12">
+        <symbol src="vulcan.bvg" height="12"/>
+    </class>
+    <class id="295" zoom-min="17">
+        <caption fill="#000000" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="place-other" zoom-min="12">
+        <caption fill="#000000" font-family="serif" font-size="15" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="place-island" zoom-min="10">
+        <caption fill="#000000" font-size="20" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="place-city">
+        <caption fill="#000000" font-size="25" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="place-town" zoom-min="9">
+        <caption fill="#000000" font-size="20" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="place-country" zoom-max="6">
+        <caption fill="#000000" font-size="25" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+
+    <class id="302" zoom-min="14">
+        <circle fill="#ec2d2d" r="6" stroke="#606060" stroke-width="1.5"/>
+    </class>
+    <class id="304" zoom-min="17">
+        <circle fill="#ec2d2d" r="4" stroke="#606060" stroke-width="1.5"/>
+    </class>
+    <class id="305" zoom-min="17">
+        <caption dy="-15" fill="#ec2d2d" font-size="11" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="306" zoom-min="17">
+        <symbol src="bakery.bvg" height="18"/>
+    </class>
+    <class id="307" zoom-min="17">
+        <symbol src="florist2.bvg" height="18"/>
+    </class>
+    <class id="308" zoom-min="17">
+        <symbol src="supermarket.bvg" height="18"/>
+    </class>
+    <class id="309" zoom-min="17">
+        <caption tag="shop" fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="310" zoom-min="17">
+        <symbol src="camping.bvg" height="18"/>
+    </class>
+    <class id="311" zoom-min="17">
+        <symbol src="hostel.bvg" height="18"/>
+    </class>
+    <class id="312" zoom-min="17">
+        <symbol src="hotel.bvg" height="18"/>
+    </class>
+    <class id="313" zoom-min="17">
+        <symbol src="information.bvg" height="16"/>
+    </class>
+    <class id="314" zoom-min="15">
+        <symbol src="view_point.bvg" height="16"/>
+    </class>
+    <class id="315" zoom-min="17">
+        <caption tag="tourism" fill="#4040ff" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="282" zoom-min="17">
+        <caption fill="#ec2d2d" font-size="9" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <classgroup>
+        <class id="housenumbers" zoom-min="17"/>
+        <class id="housenumbers-buildings" zoom-min="17"/>
+        <caption tag="housenumber" fill="#606060" font-size="10" font-style="bold" k="addr:housenumber" stroke="#ffffff" stroke-width="2.0"/>
+    </classgroup>

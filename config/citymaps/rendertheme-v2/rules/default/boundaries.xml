@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- ways -->
+    <rule e="way" k="*" v="*">
+        <!-- non-physical boundaries -->
+        <rule e="way" k="boundary" v="*">
+            <rule e="way" k="boundary" v="national_park">
+                <class id="232"/>
+            </rule>
+            <!-- INFO changed here: added closed="no" -->
+            <rule e="way" k="boundary" v="administrative" closed="no" >
+                <rule e="way" k="admin_level" v="*">
+                    <rule e="way" k="admin_level" v="11">
+                        <class id="233"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="10">
+                        <class id="234"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="9">
+                        <class id="235"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="8">
+                        <class id="236"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="7">
+                        <class id="237"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="6">
+                        <class id="238"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="5">
+                        <class id="239"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="4">
+                        <class id="240"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="3">
+                        <class id="241"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="2">
+                        <class id="242"/>
+                        <class id="243"/>
+                    </rule>
+                    <rule e="way" k="admin_level" v="1">
+                        <class id="244"/>
+                        <class id="245"/>
+                    </rule>
+                </rule>
+            </rule>
+        </rule>
+    </rule>
+</rules>

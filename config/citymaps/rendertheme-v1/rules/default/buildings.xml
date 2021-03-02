@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- ways -->
+    <rule e="way" k="*" v="*">
+        <!-- building -->
+        <rule e="way" k="building" v="*" zoom-min="15">
+            <class id="125"/>
+            <rule e="way" k="*" v="*" zoom-min="17">
+                <class id="126" simplify="node">
+                    <keep key="name"/>
+                </class>
+                <class id="housenumbers-buildings" simplify="node">
+                    <keep key="addr:housenumber"/>
+                </class>
+            </rule>
+        </rule>
+    </rule>
+</rules>

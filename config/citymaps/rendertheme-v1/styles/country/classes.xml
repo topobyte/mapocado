@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<classes map-background="#f8f8f8" map-overlay-inner="#000000" map-overlay-outer="#eeeeee" 
+	map-overlay-gps-inner="#600000ff" map-overlay-gps-outer="#ff0000ff">
+    <class id="sea">
+        <area fill="#b5d6f1"/>
+    </class>
+
+    <class id="admin-2">
+        <line stroke="#707070" stroke-linecap="butt" stroke-width="2.8"/>
+    </class>
+    <class id="admin-4">
+        <line stroke="#707070" stroke-linecap="butt" stroke-width="2.8"/>
+    </class>
+    <class id="admin-6" zoom-min="9">
+        <line stroke="#707070" stroke-linecap="butt" stroke-width="1.0"/>
+    </class>
+
+    <class id="motorway-link">
+        <line stroke="#7070a0" stroke-linecap="butt" stroke-width="1.8"/>
+    </class>
+
+    <class id="motorway">
+        <line stroke="#7070a0" stroke-linecap="butt" stroke-width="2.0"/>
+        <pathText fill="#ffffff" font-size="10" font-style="bold" k="ref" stroke="#7070a0" stroke-width="2.0"/>
+    </class>
+
+    <class id="primary-link">
+        <line stroke="#a07070" stroke-linecap="butt" stroke-width="1.5"/>
+    </class>
+
+    <class id="primary">
+        <line stroke="#a07070" stroke-linecap="butt" stroke-width="1.8"/>
+    </class>
+
+    <class id="city">
+	<circle fill="#ec2d2d" r="6" stroke="#606060" stroke-width="1.5"/>
+        <caption fill="#000000" font-size="25" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="town" zoom-min="8">
+	<circle fill="#ec2d2d" r="3" stroke="#606060" stroke-width="1.0"/>
+        <caption fill="#000000" font-family="serif" font-size="15" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="village" zoom-min="10">
+	<circle fill="#ec2d2d" r="2" stroke="#606060" stroke-width="0.5"/>
+        <caption fill="#000000" font-family="serif" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="suburb" zoom-min="10">
+	<circle fill="#2d2dec" r="2" stroke="#606060" stroke-width="0.5"/>
+        <caption fill="#000000" font-family="serif" font-size="10" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="island" zoom-min="10">
+	<circle fill="#ec2d2d" r="3" stroke="#606060" stroke-width="0.5"/>
+        <caption fill="#000000" font-size="20" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+    <class id="country" zoom-max="6">
+	<circle fill="#ec2d2d" r="6" stroke="#606060" stroke-width="1.5"/>
+        <caption fill="#000000" font-size="25" font-style="bold" k="name" stroke="#ffffff" stroke-width="2.0"/>
+    </class>
+</classes>

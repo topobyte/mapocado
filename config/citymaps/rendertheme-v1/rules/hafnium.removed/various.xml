@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- ways -->
+    <rule e="way" k="*" v="*">
+        <!-- amenity -->
+        <rule e="way" k="amenity" v="*" zoom-min="13">
+            <rule e="way" k="*" v="*" zoom-min="17">
+                <class id="47" simplify="node">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+
+        <!-- landuse -->
+        <rule e="way" k="landuse" v="*" zoom-min="12">
+            <rule e="way" k="*" v="*" zoom-min="16">
+                <class id="lu-all" simplify="node">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- natural|landuse -->
+        <rule e="way" k="natural|landuse" v="forest|wood|scrub" zoom-min="12">
+            <rule e="way" k="*" v="*" zoom-min="16">
+                <class id="forest-all" simplify="node">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- natural -->
+        <rule e="way" k="natural" v="*" zoom-min="12">
+            <rule e="way" k="*" v="*" zoom-min="16">
+                <class id="na-all" simplify="node">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- leisure -->
+        <rule e="way" k="leisure" v="*" zoom-min="12">
+            <rule e="way" k="*" v="*" zoom-min="16">
+                <class id="le-all" simplify="node">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- tourism areas -->
+        <rule e="way" k="tourism" v="*" zoom-min="12">
+            <rule e="way" k="*" v="*" zoom-min="16">
+                <class id="to-all" simplify="node">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+
+        <!-- historic -->
+        <rule e="way" k="historic" v="ruins" zoom-min="17">
+            <class id="246" simplify="node">
+                <keep key="name"/>
+            </class>
+        </rule>
+        <!-- place -->
+        <rule e="way" k="place" v="locality" zoom-min="17">
+            <class id="247" simplify="node">
+                <keep key="name"/>
+            </class>
+        </rule>
+
+        <rule e="way" k="piste:type" v="*">
+            <!-- piste areas -->
+            <rule closed="yes" e="way" k="piste:type" v="downhill">
+                <rule e="way" k="*" v="*" zoom-min="16">
+                    <class id="198" simplify="node">
+                        <keep key="name"/>
+                    </class>
+                </rule>
+            </rule>
+        </rule>
+
+        <rule e="way" k="aeroway" v="*">
+            <rule e="way" k="*" v="*" zoom-min="16">
+                <class id="103" simplify="node">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+    </rule>
+</rules>
+

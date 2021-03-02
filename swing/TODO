@@ -1,0 +1,3 @@
+Before fixing the recent null-checks, the latest (180813) map data
+created null pointer exceptions with ways on this tile:
+tile: zoom: 17, x: 70456, y: 42998

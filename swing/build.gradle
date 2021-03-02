@@ -1,0 +1,10 @@
+dependencies {
+    compile project(':mapocado-core')
+
+    compile 'de.topobyte:jeography-gis:0.2.0'
+    compile 'de.topobyte:mercator-image:0.1.0'
+    compile 'de.topobyte:jsi-rectangle-intersection-tester:0.0.1'
+    compile 'de.topobyte:bvg-awt:0.1.0'
+    compile 'de.topobyte:nomioc-luqe:0.1.0'
+    compile 'com.slimjars.trove4j:trove4j-int-int-hash-map:1.0.1'
+}

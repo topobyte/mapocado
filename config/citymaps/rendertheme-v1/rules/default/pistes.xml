@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- ways -->
+    <rule e="way" k="*" v="*">
+        <!-- pistes -->
+        <rule e="way" k="piste:type" v="*">
+            <!-- piste areas -->
+            <rule closed="yes" e="way" k="piste:type" v="downhill">
+                <rule e="way" k="piste:difficulty" v="novice">
+                    <class id="191"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="easy">
+                    <class id="192"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="intermediate">
+                    <class id="193"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="advanced">
+                    <class id="194"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="expert">
+                    <class id="195"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="freeride">
+                    <class id="196"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="~">
+                    <class id="197"/>
+                </rule>
+                <rule e="way" k="*" v="*" zoom-min="16">
+                    <class id="198" simplify="node">
+                        <keep key="name"/>
+                    </class>
+                </rule>
+            </rule>
+            <!-- piste ways -->
+            <rule closed="no" e="way" k="piste:type" v="downhill">
+                <rule e="way" k="piste:difficulty" v="novice">
+                    <class id="199"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="easy">
+                    <class id="200"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="intermediate">
+                    <class id="201"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="advanced">
+                    <class id="202"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="expert">
+                    <class id="203"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="freeride">
+                    <class id="204"/>
+                </rule>
+                <rule e="way" k="piste:difficulty" v="~">
+                    <class id="205"/>
+                </rule>
+                <rule e="way" k="*" v="*" zoom-min="14">
+                    <class id="206">
+                        <keep key="name"/>
+                    </class>
+                </rule>
+            </rule>
+            <rule e="way" k="piste:type" v="sled">
+                <class id="207"/>
+            </rule>
+            <rule e="way" k="piste:type" v="nordic">
+                <class id="208"/>
+            </rule>
+        </rule>
+    </rule>
+</rules>

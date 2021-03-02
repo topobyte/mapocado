@@ -1,0 +1,6 @@
+<styles>
+	<style name="default" file="style-default.zip"/>
+	<style name="dark" file="style-inverted-luminance.zip"/>
+	<style name="bw-light" file="style-bw-light.zip"/>
+	<style name="bw-dark" file="style-bw-dark.zip"/>
+</styles>

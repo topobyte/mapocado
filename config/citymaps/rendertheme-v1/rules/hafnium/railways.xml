@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- ways -->
+    <rule e="way" k="*" v="*">
+        <rule e="way" k="railway" v="*">
+            <!-- railway tunnel -->
+            <rule e="way" k="tunnel" v="true|yes">
+                <rule e="way" k="railway" v="tram|subway|light_rail|narrow_gauge">
+                    <class id="24"/>
+                </rule>
+                <rule e="way" k="railway" v="rail">
+                    <class id="25"/>
+                </rule>
+            </rule>
+            <!-- railway (no tunnel) -->
+            <rule e="way" k="tunnel" v="~|false|no">
+                <rule e="way" k="railway" v="station">
+                    <class id="215"/>
+                </rule>
+                <!-- railway bridge casings -->
+                <rule e="way" k="bridge" v="yes|true">
+                    <rule e="way" k="railway" v="tram">
+                        <class id="216"/>
+                    </rule>
+                    <rule e="way" k="railway" v="subway|light_rail|narrow_gauge">
+                        <class id="217"/>
+                    </rule>
+                    <rule e="way" k="railway" v="rail">
+                        <class id="218"/>
+                    </rule>
+                </rule>
+                <!-- railway casings and cores -->
+                <rule e="way" k="railway" v="tram">
+                    <class id="219"/>
+                    <class id="220"/>
+                </rule>
+                <rule e="way" k="railway" v="subway">
+                    <class id="221"/>
+                    <class id="222"/>
+                </rule>
+                <rule e="way" k="railway" v="light_rail">
+                    <class id="223"/>
+                    <class id="224"/>
+                    <class id="225"/>
+                </rule>
+                <rule e="way" k="railway" v="narrow_gauge">
+                    <class id="226"/>
+                    <class id="227"/>
+                    <class id="228"/>
+                </rule>
+                <rule e="way" k="railway" v="rail">
+                    <class id="229"/>
+                    <class id="230"/>
+                    <class id="231"/>
+                </rule>
+            </rule>
+        </rule>
+    </rule>
+</rules>

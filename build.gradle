@@ -1,0 +1,96 @@
+wrapper {
+    gradleVersion = '5.2.1'
+}
+
+allprojects {
+    group = 'de.topobyte'
+    version = '0.1.0'
+}
+
+// keeping this here as an example
+configure(project(':mapocado-mapfile-creation')) {
+    version = '0.1.0'
+}
+
+subprojects {
+    task allDeps(type: DependencyReportTask) {}
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'maven'
+
+    repositories {
+        maven {
+            url 'https://mvn.topobyte.de'
+        }
+        maven {
+            url 'https://mvn.slimjars.com'
+        }
+        mavenCentral()
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    task sourcesJar(type: Jar, dependsOn: classes) {
+        classifier = 'sources'
+        from sourceSets.main.allSource
+    }
+
+    artifacts {
+        archives sourcesJar
+    }
+
+    def global = new File('info.pom');
+    def local = new File(project.projectDir, 'info.pom');
+
+    def pomInfo = new XmlSlurper().parse(global);
+    def publish = !project.hasProperty('dontPublish')
+    if (publish) {
+        def pomInfoL = new XmlSlurper().parse(local);
+        pomInfo.name = pomInfoL.name
+        pomInfo.description = pomInfoL.description
+    }
+
+    afterEvaluate { project ->
+        if (publish) {
+            uploadArchives {
+                repositories {
+                    mavenDeployer {
+                        repository(url: maven_url_topobyte)
+                        pom.project {
+                            name pomInfo.name
+                            description pomInfo.description
+                            url pomInfo.url
+                            licenses {
+                                license {
+                                    name pomInfo.licenseName
+                                    url pomInfo.licenseUrl
+                                    distribution pomInfo.licenseDistribution
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+subprojects {
+    task showInterModuleDependencies {
+        doLast {
+            println "module '$project.name'"
+            project.configurations.compile.resolvedConfiguration.resolvedArtifacts.each {
+                if (it.id instanceof org.gradle.internal.component.local.model.PublishArtifactLocalArtifactMetadata) {
+                    def component = it.id.componentIdentifier
+                    if (component instanceof org.gradle.api.internal.artifacts.DefaultProjectComponentIdentifier) {
+                        def path = component.projectPath
+                        def name = path.substring(path.lastIndexOf(':') + 1)
+                        println "     → '$name'"
+                    }
+                }
+            }
+        }
+    }
+}

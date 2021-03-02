@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <name>mapocado-core</name>
+  <description>mapocado core module with platform-independent code</description>
+</project>

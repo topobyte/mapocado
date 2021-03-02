@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- nodes -->
+    <rule e="node" k="*" v="*">
+        <!-- aeroway -->
+        <rule e="node" k="aeroway" v="*">
+            <rule e="node" k="aeroway" v="helipad" zoom-min="17">
+                <class id="248"/>
+            </rule>
+            <rule e="node" k="aeroway" v="aerodrome|airport">
+                <class id="249"/>
+            </rule>
+        </rule>
+        <!-- amenity -->
+        <rule e="node" k="amenity" v="*">
+            <rule e="node" k="amenity" v="atm" zoom-min="17">
+                <class id="250"/>
+            </rule>
+            <rule e="node" k="amenity" v="bank" zoom-min="17">
+                <class id="251"/>
+            </rule>
+            <rule e="node" k="amenity" v="bench" zoom-min="17">
+                <class id="252"/>
+            </rule>
+            <rule e="node" k="amenity" v="bicycle_rental" zoom-min="17">
+                <class id="253"/>
+            </rule>
+            <rule e="node" k="amenity" v="bus_station" zoom-min="17">
+                <class id="254"/>
+            </rule>
+            <rule e="node" k="amenity" v="cafe" zoom-min="17">
+                <class id="255"/>
+            </rule>
+            <rule e="node" k="amenity" v="cinema" zoom-min="17">
+                <class id="256"/>
+            </rule>
+            <rule e="node" k="amenity" v="fast_food" zoom-min="17">
+                <class id="257"/>
+            </rule>
+            <rule e="node" k="amenity" v="fire_station" zoom-min="17">
+                <class id="258"/>
+            </rule>
+            <rule e="node" k="amenity" v="fountain" zoom-min="17">
+                <class id="259"/>
+            </rule>
+            <rule e="node" k="amenity" v="fuel" zoom-min="17">
+                <class id="260"/>
+            </rule>
+            <rule e="node" k="amenity" v="hospital" zoom-min="15">
+                <class id="261"/>
+            </rule>
+            <rule e="node" k="amenity" v="kindergarten" zoom-min="17">
+                <class id="262"/>
+            </rule>
+            <rule e="node" k="amenity" v="library" zoom-min="17">
+                <class id="263"/>
+            </rule>
+            <rule e="node" k="amenity" v="parking" zoom-min="17">
+                <class id="264"/>
+            </rule>
+            <rule e="node" k="amenity" v="pharmacy" zoom-min="17">
+                <class id="265"/>
+            </rule>
+            <rule e="node" k="amenity" v="place_of_worship" zoom-min="17">
+                <rule e="node" k="denomination|religion" v="jewish">
+                    <class id="266"/>
+                </rule>
+                <rule e="node" k="denomination|religion" v="muslim|moslem">
+                    <class id="267"/>
+                </rule>
+                <rule e="node" k="denomination|religion" v="christian">
+                    <class id="268"/>
+                </rule>
+            </rule>
+            <rule e="node" k="amenity" v="post_box" zoom-min="17">
+                <class id="269"/>
+            </rule>
+            <rule e="node" k="amenity" v="post_office" zoom-min="17">
+                <class id="270"/>
+            </rule>
+            <rule e="node" k="amenity" v="pub|bar" zoom-min="17">
+                <class id="271"/>
+            </rule>
+            <rule e="node" k="amenity" v="recycling" zoom-min="17">
+                <class id="272"/>
+            </rule>
+            <rule e="node" k="amenity" v="restaurant" zoom-min="17">
+                <class id="273"/>
+            </rule>
+            <rule e="node" k="amenity" v="school" zoom-min="17">
+                <class id="274"/>
+            </rule>
+            <rule e="node" k="amenity" v="shelter" zoom-min="17">
+                <class id="275"/>
+            </rule>
+            <rule e="node" k="amenity" v="telephone" zoom-min="17">
+                <class id="276"/>
+            </rule>
+            <rule e="node" k="amenity" v="theatre" zoom-min="17">
+                <class id="277"/>
+            </rule>
+            <rule e="node" k="amenity" v="toilets" zoom-min="17">
+                <class id="278"/>
+            </rule>
+            <rule e="node" k="amenity" v="university|college" zoom-min="17">
+                <class id="279"/>
+            </rule>
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="280">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- barrier -->
+        <rule e="node" k="barrier" v="bollard" zoom-min="16">
+            <class id="281"/>
+        </rule>
+        <!-- highway -->
+        <rule e="node" k="highway" v="*">
+            <rule e="node" k="highway" v="bus_stop" zoom-min="16">
+                <class id="282">
+                    <keep key="name"/>
+		</class>
+            </rule>
+            <rule e="node" k="highway" v="traffic_signals" zoom-min="17">
+                <class id="283"/>
+            </rule>
+            <rule e="node" k="highway" v="turning_circle" zoom-min="14">
+                <class id="284"/>
+            </rule>
+        </rule>
+        <!-- historic -->
+        <rule e="node" k="historic" v="*" zoom-min="15">
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="286">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <class id="285"/>
+        </rule>
+        <!-- house numbers -->
+        <rule e="node" k="addr:housenumber" v="*" zoom-min="17">
+            <class id="housenumbers">
+                <keep key="addr:housenumber"/>
+            </class>
+        </rule>
+        <!-- leisure -->
+        <rule e="node" k="leisure" v="playground" zoom-min="17">
+            <class id="288"/>
+        </rule>
+        <!-- man_made -->
+        <rule e="node" k="man_made" v="windmill" zoom-min="17">
+            <class id="289"/>
+        </rule>
+        <!-- natural -->
+        <rule e="node" k="natural" v="*">
+            <rule e="node" k="natural" v="cave_entrance" zoom-min="15">
+                <class id="290"/>
+            </rule>
+            <rule e="node" k="natural" v="peak" zoom-min="12">
+                <class id="291"/>
+                <class id="292">
+                    <keep key="ele"/>
+                </class>
+            </rule>
+            <rule e="node" k="natural" v="tree" zoom-min="16">
+                <class id="293"/>
+            </rule>
+            <rule e="node" k="natural" v="volcano" zoom-min="12">
+                <class id="294"/>
+            </rule>
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="295">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- place -->
+        <rule e="node" k="place" v="*">
+            <rule e="node" k="place" v="suburb|village" zoom-min="12">
+                <class id="place-other">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="place" v="island" zoom-min="10">
+                <class id="place-island">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="place" v="town">
+                <class id="place-town">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="place" v="city">
+                <class id="place-city">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="place" v="country">
+                <class id="place-country">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- railway -->
+        <rule e="node" k="railway" v="*">
+            <rule e="node" k="railway" v="crossing" zoom-min="16">
+                <class id="300"/>
+            </rule>
+            <rule e="node" k="railway" v="level_crossing" zoom-min="16">
+                <class id="301"/>
+            </rule>
+            <rule e="node" k="railway" v="station" zoom-min="14">
+                <class id="302"/>
+                <class id="303">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="railway" v="halt|tram_stop" zoom-min="17">
+                <class id="304"/>
+                <class id="305">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- shop -->
+        <rule e="node" k="shop" v="*">
+            <rule e="node" k="shop" v="bakery" zoom-min="17">
+                <class id="306"/>
+            </rule>
+            <rule e="node" k="shop" v="florist" zoom-min="17">
+                <class id="307"/>
+            </rule>
+            <rule e="node" k="shop" v="supermarket|organic" zoom-min="17">
+                <class id="308"/>
+            </rule>
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="309">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+        <!-- tourism -->
+        <rule e="node" k="tourism" v="*">
+            <rule e="node" k="tourism" v="camp_site" zoom-min="17">
+                <class id="310"/>
+            </rule>
+            <rule e="node" k="tourism" v="hostel" zoom-min="17">
+                <class id="311"/>
+            </rule>
+            <rule e="node" k="tourism" v="hotel" zoom-min="17">
+                <class id="312"/>
+            </rule>
+            <rule e="node" k="tourism" v="information" zoom-min="17">
+                <class id="313"/>
+            </rule>
+            <rule e="node" k="tourism" v="viewpoint" zoom-min="15">
+                <class id="314"/>
+            </rule>
+            <rule e="node" k="*" v="*" zoom-min="17">
+                <class id="315">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+    </rule>
+</rules>

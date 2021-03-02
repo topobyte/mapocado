@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <rule e="node" k="*" v="*">
+        <rule e="node" k="highway" v="*">
+            <rule e="node" k="highway" v="turning_circle" zoom-min="14">
+                <class id="284"/>
+            </rule>
+        </rule>
+    </rule>
+    <!-- turning circles -->
+    <rule e="node" k="highway" v="turning_circle" zoom-min="14">
+        <class id="104"/>
+    </rule>
+    <!-- highway one-way markers -->
+    <rule e="way" k="*" v="*">
+        <rule e="way" k="tunnel" v="~|false|no">
+            <rule e="way" k="area" v="~|false|no">
+                <rule e="way" k="highway" v="*">
+                    <rule e="way" k="oneway" v="yes|true" zoom-min="16">
+                        <class id="190"/>
+                    </rule>
+                </rule>
+            </rule>
+        </rule>
+    </rule>
+    <!-- highway -->
+    <rule e="way" k="highway" v="*">
+        <!-- highway tunnels -->
+        <rule e="way" k="tunnel" v="true|yes">
+            <rule e="way" k="highway" v="steps|footway|path" zoom-min="14">
+                <class id="tunnel-foot"/>
+            </rule>
+            <rule e="way" k="highway" v="track" zoom-min="12">
+                <class id="tunnel-track"/>
+            </rule>
+            <rule e="way" k="highway" v="cycleway|bridleway|service" zoom-min="14">
+                <class id="tunnel-cycle"/>
+            </rule>
+            <rule e="way" k="highway" v="construction|proposed">
+                <class id="tunnel-constr"/>
+            </rule>
+            <rule e="way" k="highway" v="road">
+                <class id="tunnel-road"/>
+            </rule>
+            <rule e="way" k="highway" v="pedestrian|unclassified|residential|living_street|byway" zoom-min="14">
+                <class id="tunnel-resi"/>
+            </rule>
+            <rule e="way" k="highway" v="tertiary|secondary_link|primary_link|trunk_link|motorway_link|secondary|primary|trunk">
+                <class id="tunnel-big"/>
+            </rule>
+            <rule e="way" k="highway" v="motorway">
+                <class id="tunnel-motor"/>
+            </rule>
+        </rule>
+        <!-- highway area -->
+        <rule e="way" k="area" v="yes|true">
+            <rule e="way" k="highway" v="footway|footpath" zoom-min="12">
+                <class id="88"/>
+            </rule>
+            <rule e="way" k="highway" v="pedestrian">
+                <class id="89"/>
+            </rule>
+            <rule e="way" k="highway" v="path">
+                <class id="90"/>
+            </rule>
+            <rule e="way" k="highway" v="service" zoom-min="14">
+                <class id="91"/>
+            </rule>
+            <rule e="way" k="highway" v="unclassified">
+                <class id="92"/>
+            </rule>
+            <rule e="way" k="highway" v="residential" zoom-min="14">
+                <class id="93"/>
+            </rule>
+            <rule e="way" k="highway" v="road">
+                <class id="94"/>
+            </rule>
+            <rule e="way" k="highway" v="living_street">
+                <class id="95"/>
+            </rule>
+        </rule>
+        <!-- no tunnel -->
+        <rule e="way" k="tunnel" v="~|no|false">
+            <!-- no area -->
+            <rule e="way" k="area" v="~|no|false">
+                <!-- no tunnel, no area -->
+                <rule e="way" k="highway" v="steps" zoom-min="14">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="129">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="129b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="footway" zoom-min="14">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="131">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="131b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="path" zoom-min="14">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="133">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="133b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="track" zoom-min="12">
+                    <rule e="way" k="tracktype" v="grade1">
+                        <rule e="way" k="bridge" v="~|no|false">
+                            <class id="135">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                        <rule e="way" k="bridge" v="yes|true|viaduct">
+                            <class id="135b">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                    </rule>
+                    <rule e="way" k="tracktype" v="grade2">
+                        <rule e="way" k="bridge" v="~|no|false">
+                            <class id="137">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                        <rule e="way" k="bridge" v="yes|true|viaduct">
+                            <class id="137b">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                    </rule>
+                    <rule e="way" k="tracktype" v="grade3">
+                        <rule e="way" k="bridge" v="~|no|false">
+                            <class id="139">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                        <rule e="way" k="bridge" v="yes|true|viaduct">
+                            <class id="139b">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                    </rule>
+                    <rule e="way" k="tracktype" v="grade4">
+                        <rule e="way" k="bridge" v="~|no|false">
+                            <class id="141">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                        <rule e="way" k="bridge" v="yes|true|viaduct">
+                            <class id="141b">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                    </rule>
+                    <rule e="way" k="tracktype" v="grade5">
+                        <rule e="way" k="bridge" v="~|no|false">
+                            <class id="143">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                        <rule e="way" k="bridge" v="yes|true|viaduct">
+                            <class id="143b">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                    </rule>
+                    <rule e="way" k="tracktype" v="~|no|false">
+                        <rule e="way" k="bridge" v="~|no|false">
+                            <class id="145">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                        <rule e="way" k="bridge" v="yes|true|viaduct">
+                            <class id="145b">
+                                <keep key="name" mandatory="false"/>
+                            </class>
+                        </rule>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="cycleway">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="147">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="147b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="bridleway">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="149">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="149b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="service" zoom-min="14">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="151">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="151b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="construction|proposed">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="153">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="153b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="road" zoom-min="14">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="155">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="155b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="pedestrian" zoom-min="14">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="157">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="157b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="unclassified|residential|living_street" zoom-min="14">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="159">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="159b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="byway">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="161">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="161b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="tertiary">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="163">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="163b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="secondary_link">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="165">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="165b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="primary_link">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="167">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="167b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="trunk_link">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="169">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="169b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="motorway_link">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="171">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="171b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="secondary">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="173">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="173b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="primary">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="175">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="175b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="trunk">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="177">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="177b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+                <rule e="way" k="highway" v="motorway">
+                    <rule e="way" k="bridge" v="~|no|false">
+                        <class id="179">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                    <rule e="way" k="bridge" v="yes|true|viaduct">
+                        <class id="179b">
+                            <keep key="name" mandatory="false"/>
+                        </class>
+                    </rule>
+                </rule>
+            </rule>
+        </rule>
+    </rule>
+</rules>

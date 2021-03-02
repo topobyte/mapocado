@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- ways -->
+    <rule e="way" k="*" v="*">
+        <!-- building -->
+        <rule e="way" k="building" v="*" zoom-min="15">
+            <class id="125"/>
+        </rule>
+    </rule>
+
+</rules>

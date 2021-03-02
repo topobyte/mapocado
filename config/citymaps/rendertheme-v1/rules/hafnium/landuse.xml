@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <rule e="way" k="*" v="*">
+        <!-- landuse -->
+        <rule e="way" k="landuse" v="*" zoom-min="12">
+            <rule e="way" k="landuse" v="military">
+                <class id="lu-military"/>
+            </rule>
+            <rule e="way" k="landuse" v="residential|farmyard">
+                <class id="lu-resifarm"/>
+            </rule>
+            <rule e="way" k="landuse" v="retail">
+                <class id="lu-retail"/>
+            </rule>
+            <rule e="way" k="landuse" v="industrial|brownfield|railway">
+                <class id="lu-ibr"/>
+            </rule>
+            <rule e="way" k="landuse" v="commercial">
+                <class id="lu-comm"/>
+            </rule>
+            <rule e="way" k="landuse" v="construction|greenfield">
+                <class id="lu-constr"/>
+            </rule>
+            <rule e="way" k="landuse" v="garages">
+                <class id="lu-garages"/>
+            </rule>
+            <rule e="way" k="landuse" v="landfill|quarry">
+                <class id="lu-landfill"/>
+            </rule>
+            <rule e="way" k="landuse" v="cemetery">
+                <class id="lu-cemetery"/>
+            </rule>
+            <rule e="way" k="landuse" v="field|farm|farmland|meadow|grass">
+                <class id="lu-field"/>
+            </rule>
+            <rule e="way" k="landuse" v="allotments|village_green|recreation_ground">
+                <class id="lu-allotments"/>
+            </rule>
+            <rule e="way" k="landuse" v="reservoir|basin">
+                <class id="lu-reservoir"/>
+            </rule>
+        </rule>
+        <!-- natural|landuse -->
+        <rule e="way" k="natural|landuse" v="forest|wood|scrub" zoom-min="12">
+            <rule e="way" k="wood" v="*">
+                <rule e="way" k="wood" v="coniferous">
+                    <class id="forest-c"/>
+                </rule>
+                <rule e="way" k="wood" v="deciduous">
+                    <class id="forest-d"/>
+                </rule>
+                <rule e="way" k="wood" v="mixed">
+                    <class id="forest-m"/>
+                </rule>
+            </rule>
+            <rule e="way" k="wood" v="~">
+                <class id="forest-o"/>
+            </rule>
+        </rule>
+        <!-- natural -->
+        <rule e="way" k="natural" v="*" zoom-min="12">
+            <rule e="way" k="natural" v="coastline">
+                <rule closed="no" e="way" k="*" v="*">
+                    <class id="coastline"/>
+                </rule>
+            </rule>
+            <rule e="way" k="natural" v="glacier">
+                <class id="na-glacier"/>
+            </rule>
+            <rule e="way" k="natural" v="land">
+                <class id="na-land"/>
+            </rule>
+            <rule e="way" k="natural" v="beach">
+                <class id="na-beach"/>
+            </rule>
+            <rule e="way" k="natural" v="heath">
+                <class id="na-heath"/>
+            </rule>
+            <rule e="way" k="natural" v="marsh|wetland">
+                <class id="na-wet"/>
+            </rule>
+        </rule>
+        <!-- leisure -->
+        <rule e="way" k="leisure" v="*" zoom-min="12">
+            <rule e="way" k="leisure" v="park|garden|golf_course|common|green">
+                <class id="le-park"/>
+            </rule>
+            <rule e="way" k="leisure" v="playground|playing_fields|pitch|dog_park">
+                <rule e="way" k="*" v="playground" zoom-min="17">
+                    <class id="le-play"/>
+                </rule>
+                <class id="le-play-more"/>
+            </rule>
+            <rule e="way" k="leisure" v="nature_reserve">
+                <class id="le-nature"/>
+            </rule>
+            <rule e="way" k="leisure" v="stadium|sports_centre|water_park">
+                <class id="le-stadium"/>
+            </rule>
+            <rule e="way" k="leisure" v="track">
+                <rule e="way" k="area" v="yes|true">
+                    <class id="le-track-area"/>
+                </rule>
+                <rule e="way" k="area" v="~|no|false">
+                    <class id="le-track-noarea"/>
+                </rule>
+            </rule>
+            <rule e="way" k="leisure" v="swimming_pool">
+                <class id="le-swimming"/>
+            </rule>
+        </rule>
+        <!-- waterways -->
+        <rule e="way" k="waterway" v="*">
+            <!-- waterway casings -->
+            <rule e="way" k="waterway" v="drain">
+                <class id="ww-1"/>
+            </rule>
+            <rule e="way" k="waterway" v="canal">
+                <class id="ww-2"/>
+            </rule>
+            <!-- waterway cores -->
+            <rule e="way" k="waterway" v="ditch">
+                <class id="ww-3"/>
+            </rule>
+            <rule e="way" k="waterway" v="drain">
+                <class id="ww-4"/>
+            </rule>
+            <rule e="way" k="waterway" v="canal">
+                <class id="ww-5"/>
+            </rule>
+            <rule e="way" k="waterway" v="stream">
+                <class id="ww-6"/>
+            </rule>
+            <rule e="way" k="waterway" v="river">
+                <class id="ww-7"/>
+            </rule>
+            <rule e="way" k="waterway" v="dock">
+                <class id="ww-8"/>
+            </rule>
+            <rule e="way" k="waterway" v="riverbank">
+                <class id="ww-9"/>
+            </rule>
+            <rule e="way" k="waterway" v="weir">
+                <class id="ww-10"/>
+            </rule>
+            <rule e="way" k="waterway" v="dam">
+                <class id="ww-11"/>
+            </rule>
+            <rule e="way" k="lock" v="yes|true">
+                <class id="ww-12"/>
+                <class id="ww-13"/>
+            </rule>
+        </rule>
+        <!-- military -->
+        <rule e="way" k="military" v="*">
+            <class id="military"/>
+        </rule>
+        <!-- sport -->
+        <rule e="way" k="sport" v="*" zoom-min="12">
+            <rule e="way" k="sport" v="soccer" zoom-min="17">
+                <class id="sp-1"/>
+            </rule>
+            <rule e="way" k="sport" v="swimming|canoe|diving|scuba_diving">
+                <class id="sp-2"/>
+            </rule>
+            <rule e="way" k="sport" v="tennis">
+                <rule e="way" k="*" v="*" zoom-min="17">
+                    <class id="sp-4"/>
+                </rule>
+                <class id="sp-3"/>
+            </rule>
+        </rule>
+        <!-- tourism areas -->
+        <rule e="way" k="tourism" v="*" zoom-min="12">
+            <rule e="way" k="tourism" v="attraction">
+                <class id="to-attr"/>
+            </rule>
+            <rule e="way" k="tourism" v="zoo|picnic_site|caravan_site|camp_site">
+                <class id="to-zoo"/>
+            </rule>
+        </rule>
+        <rule e="way" k="natural" v="water">
+            <class id="na-water"/>
+        </rule>
+    </rule>
+</rules>

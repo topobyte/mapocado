@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+
+    <rule e="way" k="*" v="*">
+        <!-- amenity -->
+        <rule e="way" k="amenity" v="*" zoom-min="13">
+            <rule e="way" k="amenity" v="kindergarten|school|college|university">
+                <rule e="way" k="building" v="~">
+                	<class id="37"/>
+            	</rule>
+            </rule>
+            <rule e="way" k="amenity" v="grave_yard">
+                <class id="38"/>
+            </rule>
+            <rule e="way" k="amenity" v="parking">
+                <rule e="way" k="access" v="private" zoom-min="15">
+                    <class id="40"/>
+                </rule>
+                <class id="39"/>
+            </rule>
+            <rule closed="yes" e="way" k="amenity" v="fountain">
+                <rule e="way" k="*" v="*" zoom-min="17">
+                    <class id="43" simplify="node"/>
+                </rule>
+                <class id="42"/>
+            </rule>
+        </rule>
+    </rule>
+</rules>

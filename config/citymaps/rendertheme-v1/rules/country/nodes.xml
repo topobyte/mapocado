@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- nodes -->
+    <rule e="node" k="*" v="*">
+        <!-- place -->
+        <rule e="node" k="place" v="*">
+            <rule e="node" k="place" v="suburb" zoom-min="10">
+                <class id="suburb">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="place" v="town" zoom-min="8">
+                <class id="town">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="place" v="village" zoom-min="10">
+                <class id="village">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="place" v="island" zoom-min="10">
+                <class id="island">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="place" v="city">
+                <class id="city">
+                    <keep key="name"/>
+                </class>
+            </rule>
+            <rule e="node" k="place" v="country">
+                <class id="country">
+                    <keep key="name"/>
+                </class>
+            </rule>
+        </rule>
+    </rule>
+</rules>

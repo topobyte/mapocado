@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- ways -->
+    <rule e="way" k="*" v="*">
+        <!-- platform cores -->
+        <rule e="way" k="highway|railway|public_transport" v="platform">
+            <rule closed="yes" e="way" k="*" v="*">
+                <class id="96"/>
+            </rule>
+            <rule closed="no" e="way" k="*" v="*">
+                <class id="97"/>
+            </rule>
+        </rule>
+    </rule>
+</rules>

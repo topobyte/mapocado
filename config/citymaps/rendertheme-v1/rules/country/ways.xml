@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- nodes -->
+    <rule e="way" k="*" v="*">
+        <rule e="way" k="highway" v="motorway">
+            <class id="motorway">
+                <keep key="name" mandatory="false"/>
+                <keep key="ref" mandatory="false"/>
+            </class>
+        </rule>
+        <rule e="way" k="highway" v="motorway_link">
+            <class id="motorway-link">
+                <keep key="name" mandatory="false"/>
+            </class>
+        </rule>
+        <rule e="way" k="highway" v="primary" zoom-min="9">
+            <class id="primary">
+                <keep key="name" mandatory="false"/>
+            </class>
+        </rule>
+        <rule e="way" k="highway" v="primary_link" zoom-min="9">
+            <class id="primary-link">
+                <keep key="name" mandatory="false"/>
+            </class>
+        </rule>
+
+        <rule e="way" k="boundary" v="administrative">
+		<rule e="way" k="admin_level" v="2">
+            		<class id="admin-2" />
+		</rule>
+		<rule e="way" k="admin_level" v="4">
+            		<class id="admin-4" />
+		</rule>
+		<rule e="way" k="admin_level" v="6" zoom-min="9">
+            		<class id="admin-6" />
+		</rule>
+        </rule>
+    </rule>
+</rules>

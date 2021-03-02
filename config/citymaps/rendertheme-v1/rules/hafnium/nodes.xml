@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rules>
+    <!-- nodes -->
+    <rule e="node" k="*" v="*">
+        <!-- amenity -->
+        <rule e="node" k="amenity" v="*">
+            <rule e="node" k="amenity" v="bench" zoom-min="17">
+                <class id="252"/>
+            </rule>
+            <rule e="node" k="amenity" v="fountain" zoom-min="17">
+                <class id="259"/>
+            </rule>
+        </rule>
+        <!-- barrier -->
+        <rule e="node" k="barrier" v="bollard" zoom-min="16">
+            <class id="281"/>
+        </rule>
+        <!-- highway -->
+        <rule e="node" k="highway" v="*">
+            <rule e="node" k="highway" v="traffic_signals" zoom-min="17">
+                <class id="283"/>
+            </rule>
+        </rule>
+        <!-- natural -->
+        <rule e="node" k="natural" v="*">
+            <rule e="node" k="natural" v="cave_entrance" zoom-min="15">
+                <class id="290"/>
+            </rule>
+            <rule e="node" k="natural" v="tree" zoom-min="16">
+                <class id="293"/>
+            </rule>
+        </rule>
+        <!-- railway -->
+        <rule e="node" k="railway" v="*">
+            <rule e="node" k="railway" v="crossing" zoom-min="16">
+                <class id="300"/>
+            </rule>
+            <rule e="node" k="railway" v="level_crossing" zoom-min="16">
+                <class id="301"/>
+            </rule>
+        </rule>
+    </rule>
+</rules>

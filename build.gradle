@@ -4,12 +4,12 @@ wrapper {
 
 allprojects {
     group = 'de.topobyte'
-    version = '0.1.0'
+    version = '0.2.0'
 }
 
 // keeping this here as an example
 configure(project(':mapocado-mapfile-creation')) {
-    version = '0.1.0'
+    version = '0.2.0'
 }
 
 subprojects {

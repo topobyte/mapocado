@@ -52,12 +52,18 @@ subprojects {
         pomInfo.description = pomInfoL.description
     }
 
+    if (publish) {
+        if (project.hasProperty("topobyte")) {
+            apply from: 'file:///' + System.getProperty("user.home") \
+                + '/.gradle/topobyte.gradle'
+        }
+    }
+
     afterEvaluate { project ->
         if (publish) {
             uploadArchives {
                 repositories {
                     mavenDeployer {
-                        repository(url: maven_url_topobyte)
                         pom.project {
                             name pomInfo.name
                             description pomInfo.description

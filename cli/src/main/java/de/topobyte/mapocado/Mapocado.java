@@ -15,8 +15,10 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with mapocado. If not, see <http://www.gnu.org/licenses/>.
 
-package de.topobyte.mapocado.mapformat;
+package de.topobyte.mapocado;
 
+import de.topobyte.jeography.tools.cityviewer.RunCityViewer;
+import de.topobyte.jeography.tools.cityviewer.RunStandaloneCityViewer;
 import de.topobyte.mapocado.mapformat.mapfile.PrintIntervals;
 import de.topobyte.mapocado.mapformat.mapfile.PrintMetadata;
 import de.topobyte.mapocado.mapformat.profiling.ClassHistogramTest;
@@ -29,6 +31,13 @@ import de.topobyte.mapocado.mapformat.profiling.disktree.TreeProfiler;
 import de.topobyte.mapocado.mapformat.profiling.disktree.TreeProfilerClasses;
 import de.topobyte.mapocado.mapformat.profiling.disktree.TreeProfilerNonClosedAreas;
 import de.topobyte.mapocado.mapformat.profiling.osm.OsmStringProfiler;
+import de.topobyte.mapocado.styles.convert.RunBundleChanger;
+import de.topobyte.mapocado.styles.convert.RunStyleChanger;
+import de.topobyte.mapocado.styles.visualize.html.HtmlCreator;
+import de.topobyte.mapocado.swing.viewer.RunMapStyleEditor;
+import de.topobyte.mapocado.swing.viewer.RunMapViewerCompare;
+import de.topobyte.mapocado.swing.viewer.RunMapViewerNook;
+import de.topobyte.mapocado.swing.viewer.RunMapViewerSimple;
 import de.topobyte.utilities.apache.commons.cli.commands.ArgumentParser;
 import de.topobyte.utilities.apache.commons.cli.commands.ExeRunner;
 import de.topobyte.utilities.apache.commons.cli.commands.ExecutionData;
@@ -37,7 +46,7 @@ import de.topobyte.utilities.apache.commons.cli.commands.options.DelegateExeOpti
 import de.topobyte.utilities.apache.commons.cli.commands.options.ExeOptions;
 import de.topobyte.utilities.apache.commons.cli.commands.options.ExeOptionsFactory;
 
-public class MapocadoMapfileCli
+public class Mapocado
 {
 
 	public static ExeOptionsFactory OPTIONS_FACTORY = new ExeOptionsFactory() {
@@ -46,6 +55,30 @@ public class MapocadoMapfileCli
 		public ExeOptions createOptions()
 		{
 			DelegateExeOptions options = new DelegateExeOptions();
+			options.addCommand("city-viewer", RunCityViewer.OPTIONS_FACTORY,
+					RunCityViewer.class);
+			options.addCommand("standalone-city-viewer",
+					RunStandaloneCityViewer.class);
+
+			options.addCommand("map-viewer-simple",
+					RunMapViewerSimple.OPTIONS_FACTORY,
+					RunMapViewerSimple.class);
+			options.addCommand("map-viewer-nook",
+					RunMapViewerNook.OPTIONS_FACTORY, RunMapViewerNook.class);
+			options.addCommand("map-viewer-compare",
+					RunMapViewerCompare.OPTIONS_FACTORY,
+					RunMapViewerCompare.class);
+			options.addCommand("map-style-editor",
+					RunMapStyleEditor.OPTIONS_FACTORY, RunMapStyleEditor.class);
+
+			options.addCommand("create-html", HtmlCreator.OPTIONS_FACTORY,
+					HtmlCreator.class);
+
+			options.addCommand("style-changer", RunStyleChanger.OPTIONS_FACTORY,
+					RunStyleChanger.class);
+			options.addCommand("bundle-changer",
+					RunBundleChanger.OPTIONS_FACTORY, RunBundleChanger.class);
+
 			options.addCommand("mapfile", OPTIONS_FACTORY_MAPFILE);
 			options.addCommand("profiling", OPTIONS_FACTORY_PROFILING);
 
@@ -124,7 +157,7 @@ public class MapocadoMapfileCli
 	public static void main(String[] args) throws RunnerException
 	{
 		ExeOptions options = OPTIONS_FACTORY.createOptions();
-		ArgumentParser parser = new ArgumentParser("mapocado-tools", options);
+		ArgumentParser parser = new ArgumentParser("mapocado", options);
 
 		ExecutionData data = parser.parse(args);
 		if (data != null) {

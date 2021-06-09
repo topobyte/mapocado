@@ -1,4 +1,5 @@
 dependencies {
+    compile project(':mapocado-tools')
     compile project(':mapocado-mapfile-creation')
 
     compile 'de.topobyte:osm4j-tbo:1.2.0'

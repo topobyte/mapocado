@@ -1,7 +1,0 @@
-#!/bin/bash
-
-DIR=$(dirname $0)
-CMD="$DIR/mapocado-mapfile-creation.sh"
-CLASS="de.topobyte.mapocado.mapformat.MapocadoMapfileCli"
-
-exec "$CMD" "$CLASS" "$@"

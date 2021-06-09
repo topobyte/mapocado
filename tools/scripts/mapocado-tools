@@ -1,5 +1,0 @@
-#!/bin/bash
-
-DIR=`dirname $0`
-
-exec $DIR/mapocado-tools.sh de.topobyte.mapocado.tools.MapocadoTools "$@"

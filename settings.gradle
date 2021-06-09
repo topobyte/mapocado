@@ -1,15 +1,13 @@
 include 'core'
 include 'swing'
 include 'android'
-include 'tools/core', 'tools/cli'
-include 'mapfile-creation/core', 'mapfile-creation/cli'
+include 'tools'
+include 'mapfile-creation'
+include 'cli'
 
 project(':core').name = 'mapocado-core'
 project(':swing').name = 'mapocado-swing'
 project(':android').name = 'mapocado-android'
-
-project(':tools/core').name = 'mapocado-tools'
-project(':tools/cli').name = 'mapocado-tools-cli'
-
-project(':mapfile-creation/core').name = 'mapocado-mapfile-creation'
-project(':mapfile-creation/cli').name = 'mapocado-mapfile-creation-cli'
+project(':tools').name = 'mapocado-tools'
+project(':mapfile-creation').name = 'mapocado-mapfile-creation'
+project(':cli').name = 'mapocado-cli'

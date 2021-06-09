@@ -17,13 +17,42 @@
 
 package de.topobyte.mapocado.android.mapfile;
 
+import java.io.File;
 import java.io.IOException;
 
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 
-public interface MapFileOpener
+public class FileMapfileOpener implements MapfileOpener
 {
 
-	public Mapfile open() throws IOException, ClassNotFoundException;
+	private File file;
+
+	public FileMapfileOpener(File file)
+	{
+		this.file = file;
+	}
+
+	@Override
+	public Mapfile open() throws IOException, ClassNotFoundException
+	{
+		return MapfileAccess.open(file);
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		if (!(o instanceof FileMapfileOpener)) {
+			return false;
+		}
+		FileMapfileOpener other = (FileMapfileOpener) o;
+		return other.file.equals(file);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return file.hashCode();
+	}
 
 }

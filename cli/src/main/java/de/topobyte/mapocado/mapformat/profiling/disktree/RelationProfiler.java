@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.TreeMultiset;
 
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 import de.topobyte.mapocado.mapformat.geom.Multipolygon;
 import de.topobyte.mapocado.mapformat.interval.IntervalTree;
@@ -74,7 +74,7 @@ public class RelationProfiler
 
 		Mapfile mapfile = null;
 		try {
-			mapfile = MapFileAccess.open(new File(inputFile));
+			mapfile = MapfileAccess.open(new File(inputFile));
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			System.exit(1);

@@ -37,7 +37,7 @@ import de.topobyte.jeography.core.Tile;
 import de.topobyte.jeography.viewer.config.Configuration;
 import de.topobyte.jeography.viewer.config.TileConfig;
 import de.topobyte.jeography.viewer.core.Viewer;
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 import de.topobyte.mapocado.styles.bundled.ConfigBundle;
 
@@ -79,7 +79,7 @@ public class MapViewerCompare extends JPanel
 			throws IOException, ClassNotFoundException,
 			ParserConfigurationException, SAXException
 	{
-		Mapfile mapfile = MapFileAccess.open(fileMapfile);
+		Mapfile mapfile = MapfileAccess.open(fileMapfile);
 		mapfile.close();
 		double startLon = startupLon;
 		double startLat = startupLat;

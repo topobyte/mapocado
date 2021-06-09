@@ -32,7 +32,7 @@ import com.google.common.collect.HashMultiset;
 import com.google.common.collect.Multiset;
 import com.slimjars.dist.gnu.trove.list.array.TIntArrayList;
 
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 import de.topobyte.mapocado.mapformat.interval.IntervalTree;
 import de.topobyte.mapocado.mapformat.io.StringPool;
@@ -73,7 +73,7 @@ public class StringPoolProfiler
 
 		Mapfile mapfile = null;
 		try {
-			mapfile = MapFileAccess.open(new File(inputFile));
+			mapfile = MapfileAccess.open(new File(inputFile));
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			System.exit(1);

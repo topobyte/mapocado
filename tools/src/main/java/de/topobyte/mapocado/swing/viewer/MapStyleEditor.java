@@ -39,7 +39,7 @@ import org.xml.sax.SAXException;
 
 import de.topobyte.awt.util.GridBagConstraintsEditor;
 import de.topobyte.jeography.core.Tile;
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 import de.topobyte.mapocado.styles.bundled.ConfigBundle;
 import de.topobyte.mapocado.styles.convert.BundleChanger;
@@ -89,7 +89,7 @@ public class MapStyleEditor extends JPanel
 		this.configBundle = configBundle;
 
 		// start position
-		Mapfile mapfile = MapFileAccess.open(fileMapfile);
+		Mapfile mapfile = MapfileAccess.open(fileMapfile);
 		mapfile.close();
 		double startLon = startupLon;
 		double startLat = startupLat;

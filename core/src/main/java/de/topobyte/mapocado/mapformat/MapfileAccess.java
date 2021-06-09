@@ -41,9 +41,9 @@ import de.topobyte.randomaccess.FileAccess;
 import de.topobyte.randomaccess.InputStreamFileAccess;
 import de.topobyte.randomaccess.RandomAccessFileAccess;
 
-public class MapFileAccess
+public class MapfileAccess
 {
-	final static Logger logger = LoggerFactory.getLogger(MapFileAccess.class);
+	final static Logger logger = LoggerFactory.getLogger(MapfileAccess.class);
 
 	public static Mapfile open(File target)
 			throws IOException, ClassNotFoundException

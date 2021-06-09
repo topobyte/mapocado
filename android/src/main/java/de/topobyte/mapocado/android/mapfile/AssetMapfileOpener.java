@@ -22,16 +22,16 @@ import java.io.InputStream;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 
-public class AssetMapFileOpener implements MapFileOpener
+public class AssetMapfileOpener implements MapfileOpener
 {
 
 	private String assetFileName;
 	private Context context;
 
-	public AssetMapFileOpener(Context context, String assetFileName)
+	public AssetMapfileOpener(Context context, String assetFileName)
 	{
 		this.context = context;
 		this.assetFileName = assetFileName;
@@ -43,16 +43,16 @@ public class AssetMapFileOpener implements MapFileOpener
 		AssetManager assets = context.getAssets();
 		InputStream input = assets.open(assetFileName,
 				AssetManager.ACCESS_RANDOM);
-		return MapFileAccess.open(input);
+		return MapfileAccess.open(input);
 	}
 
 	@Override
 	public boolean equals(Object o)
 	{
-		if (!(o instanceof AssetMapFileOpener)) {
+		if (!(o instanceof AssetMapfileOpener)) {
 			return false;
 		}
-		AssetMapFileOpener other = (AssetMapFileOpener) o;
+		AssetMapfileOpener other = (AssetMapfileOpener) o;
 		return other.assetFileName.equals(assetFileName);
 	}
 

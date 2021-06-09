@@ -35,7 +35,7 @@ import com.slimjars.dist.gnu.trove.map.hash.TIntObjectHashMap;
 
 import de.topobyte.guava.util.MultisetUtil;
 import de.topobyte.guava.util.Order;
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 import de.topobyte.mapocado.mapformat.interval.IntervalTree;
 import de.topobyte.mapocado.mapformat.model.Way;
@@ -73,7 +73,7 @@ public class StringHistogram
 
 		Mapfile mapfile = null;
 		try {
-			mapfile = MapFileAccess.open(new File(inputFile));
+			mapfile = MapfileAccess.open(new File(inputFile));
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			System.exit(1);

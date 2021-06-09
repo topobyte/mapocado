@@ -33,7 +33,7 @@ import org.xml.sax.SAXException;
 import de.topobyte.jeography.core.Tile;
 import de.topobyte.jeography.viewer.config.TileConfig;
 import de.topobyte.jeography.viewer.core.Viewer;
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 import de.topobyte.mapocado.styles.bundled.ConfigBundle;
 import de.topobyte.mapocado.styles.bundled.ConfigBundleReader;
@@ -83,7 +83,7 @@ public class MapocadoViewer extends Viewer
 
 		getMapWindow().setMaxZoom(23);
 
-		Mapfile mapfile = MapFileAccess.open(file);
+		Mapfile mapfile = MapfileAccess.open(file);
 		renderConfig = createMapRenderConfig(configBundle, mapfile);
 
 		if (connection != null) {
@@ -192,7 +192,7 @@ public class MapocadoViewer extends Viewer
 			ConfigBundle configBundle, int tileSize) throws IOException,
 			ClassNotFoundException, ParserConfigurationException, SAXException
 	{
-		Mapfile mapfile = MapFileAccess.open(file);
+		Mapfile mapfile = MapfileAccess.open(file);
 		MapRenderConfig renderConfig = createMapRenderConfig(configBundle,
 				mapfile);
 		MapTileConfig mapTileConfig = new MapTileConfig(101, "MapTiles",

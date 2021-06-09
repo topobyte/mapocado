@@ -42,7 +42,7 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import de.topobyte.jeography.viewer.core.Viewer;
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 import de.topobyte.mapocado.styles.bundled.ConfigBundle;
 import de.topobyte.mapocado.swing.rendering.TreeLeafTileConfig;
@@ -86,7 +86,7 @@ public class MapViewerNook extends JPanel
 			ParserConfigurationException, SAXException
 	{
 		// start position
-		Mapfile mapfile = MapFileAccess.open(fileMapfile);
+		Mapfile mapfile = MapfileAccess.open(fileMapfile);
 		mapfile.close();
 		double startLon = startupLon;
 		double startLat = startupLat;
@@ -118,7 +118,7 @@ public class MapViewerNook extends JPanel
 		// DEBUG: view tree leafs as overlay
 		boolean showTreeLeafs = false;
 		if (showTreeLeafs) {
-			Mapfile mapfileOverlay = MapFileAccess.open(fileMapfile);
+			Mapfile mapfileOverlay = MapfileAccess.open(fileMapfile);
 			TreeLeafTileConfig leafConfig = new TreeLeafTileConfig(13, "leafs",
 					mapfileOverlay, tileSize);
 			viewer.setOverlayTileConfig(leafConfig);

@@ -44,7 +44,7 @@ import org.xml.sax.SAXException;
 
 import de.topobyte.adt.geo.BBox;
 import de.topobyte.jeography.viewer.util.Borders;
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 import de.topobyte.mapocado.styles.bundled.ConfigBundle;
 import de.topobyte.mapocado.styles.bundled.ConfigBundleReader;
@@ -376,7 +376,7 @@ public class Test
 	public void go() throws ParserConfigurationException, SAXException,
 			IOException, InvalidBundleException, ClassNotFoundException
 	{
-		Mapfile mapfile = MapFileAccess.open(fileMapfile.toFile());
+		Mapfile mapfile = MapfileAccess.open(fileMapfile.toFile());
 
 		ConfigBundle configBundle = ConfigBundleReader
 				.readConfigBundle(fileStyle.toFile());

@@ -47,7 +47,7 @@ import de.topobyte.chromaticity.ColorCode;
 import de.topobyte.jeography.core.Tile;
 import de.topobyte.jeography.core.TileUtil;
 import de.topobyte.jeography.tiles.source.ImageSource;
-import de.topobyte.mapocado.android.mapfile.MapFileOpener;
+import de.topobyte.mapocado.android.mapfile.MapfileOpener;
 import de.topobyte.mapocado.android.rendering.gather.CoordinateGatherer;
 import de.topobyte.mapocado.android.rendering.gather.PathTextElement;
 import de.topobyte.mapocado.android.rendering.gather.RelationGatherer;
@@ -105,7 +105,7 @@ public class MapocadoImageSource
 	private float tileScaleFactor = 1.0f;
 	private float combinedScaleFactor = 1.0f;
 
-	public void setMapFile(MapFileOpener opener)
+	public void setMapFile(MapfileOpener opener)
 			throws IOException, ClassNotFoundException
 	{
 		mapfile = opener.open();

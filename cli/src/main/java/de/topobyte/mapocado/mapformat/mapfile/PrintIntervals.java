@@ -28,7 +28,7 @@ import org.apache.commons.cli.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import de.topobyte.mapocado.mapformat.MapFileAccess;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
 import de.topobyte.utilities.apache.commons.cli.OptionHelper;
 
@@ -62,7 +62,7 @@ public class PrintIntervals
 
 		Mapfile mapfile = null;
 		try {
-			mapfile = MapFileAccess.open(new File(inputFile));
+			mapfile = MapfileAccess.open(new File(inputFile));
 		} catch (ClassNotFoundException e) {
 			logger.error("while opening mapfile", e);
 			System.exit(1);

@@ -1,4 +1,4 @@
-package de.topobyte.mapocado.mapformat.profiling.histogram;
+package de.topobyte.mapocado.mapformat.profiling.osm;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -30,10 +30,10 @@ import de.topobyte.utilities.apache.commons.cli.OptionHelper;
  * @author Sebastian Kuerten (sebastian.kuerten@fu-berlin.de)
  * 
  */
-public class StringHistogram
+public class OsmStringHistogram
 {
 
-	final static Logger logger = LoggerFactory.getLogger(StringHistogram.class);
+	final static Logger logger = LoggerFactory.getLogger(OsmStringHistogram.class);
 
 	public static void main(String[] args) throws IOException
 	{

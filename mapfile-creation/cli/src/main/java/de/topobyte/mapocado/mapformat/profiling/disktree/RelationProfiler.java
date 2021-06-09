@@ -34,7 +34,7 @@ public class RelationProfiler
 
 	private static final String OPTION_INPUT = "input";
 
-	public static void main(String[] args) throws IOException
+	public static void main(String name, String[] args) throws IOException
 	{
 		// @formatter:off
 		Options options = new Options();

@@ -1,4 +1,4 @@
-package de.topobyte.mapocado.mapformat.profiling;
+package de.topobyte.mapocado.mapformat.mapfile;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,7 +22,7 @@ public class PrintIntervals
 
 	private static final String OPTION_INPUT = "input";
 
-	public static void main(String[] args)
+	public static void main(String name, String[] args)
 	{
 		// @formatter:off
 		Options options = new Options();

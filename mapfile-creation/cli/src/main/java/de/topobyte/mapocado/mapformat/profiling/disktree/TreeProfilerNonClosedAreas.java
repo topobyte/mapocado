@@ -52,7 +52,7 @@ public class TreeProfilerNonClosedAreas
 	private static final String OPTION_RULES = "rules";
 	private static final String OPTION_CLASSES = "classes";
 
-	public static void main(String[] args)
+	public static void main(String name, String[] args)
 			throws IOException, ParserConfigurationException, SAXException
 	{
 		// @formatter:off

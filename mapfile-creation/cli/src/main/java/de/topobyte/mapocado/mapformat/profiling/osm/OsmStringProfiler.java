@@ -1,4 +1,4 @@
-package de.topobyte.mapocado.mapformat.profiling;
+package de.topobyte.mapocado.mapformat.profiling.osm;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -30,7 +30,7 @@ public class OsmStringProfiler
 
 	private static final String OPTION_INPUT = "input";
 
-	public static void main(String[] args) throws IOException
+	public static void main(String name, String[] args) throws IOException
 	{
 		Options options = new Options();
 		OptionHelper.addL(options, OPTION_INPUT, true, true,

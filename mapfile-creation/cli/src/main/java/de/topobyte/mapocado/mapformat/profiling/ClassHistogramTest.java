@@ -1,4 +1,4 @@
-package de.topobyte.mapocado.mapformat.preprocess.classhistogram;
+package de.topobyte.mapocado.mapformat.profiling;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,6 +13,8 @@ import org.apache.commons.cli.ParseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import de.topobyte.mapocado.mapformat.io.StringPool;
+import de.topobyte.mapocado.mapformat.preprocess.classhistogram.ClassHistogramBuilder;
 import de.topobyte.mapocado.styles.rules.RuleFileReader;
 import de.topobyte.mapocado.styles.rules.RuleSet;
 import de.topobyte.osm4j.diskstorage.nodedb.NodeDB;
@@ -37,7 +39,7 @@ public class ClassHistogramTest
 	 * @param args
 	 *            input, output_index, output_data
 	 */
-	public static void main(String[] args) throws IOException
+	public static void main(String name, String[] args) throws IOException
 	{
 		// @formatter:off
 		Options options = new Options();
@@ -105,7 +107,9 @@ public class ClassHistogramTest
 		ClassHistogramBuilder test = new ClassHistogramBuilder(config,
 				nodesFile, waysFile, relationsFile, nodeDB);
 		test.execute();
-		test.createClassStringPool();
+		StringPool stringPool = test.createClassStringPool();
+		System.out.println(String.format("String pool size: %d",
+				stringPool.getNumberOfEntries()));
 	}
 
 }

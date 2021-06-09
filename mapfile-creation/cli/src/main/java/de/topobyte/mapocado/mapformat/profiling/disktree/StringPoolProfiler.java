@@ -1,4 +1,4 @@
-package de.topobyte.mapocado.mapformat.profiling.metadata;
+package de.topobyte.mapocado.mapformat.profiling.disktree;
 
 import java.io.File;
 import java.io.IOException;

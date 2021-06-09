@@ -85,10 +85,10 @@ import de.topobyte.simplemapfile.xml.SmxFileWriter;
 /**
  * @author Sebastian Kuerten (sebastian.kuerten@fu-berlin.de)
  */
-public class MapFormatCreate implements OsmEntityGeometryHandler
+class MapformatCreator implements OsmEntityGeometryHandler
 {
 
-	static final Logger logger = LoggerFactory.getLogger(MapFormatCreate.class);
+	static final Logger logger = LoggerFactory.getLogger(MapformatCreator.class);
 
 	private File outputFile;
 	private RuleSet config;
@@ -122,7 +122,7 @@ public class MapFormatCreate implements OsmEntityGeometryHandler
 
 	private int pointLimit = 1000;
 
-	public MapFormatCreate(File outputFile, RuleSet config,
+	public MapformatCreator(File outputFile, RuleSet config,
 			OsmFileInput nodesFile, OsmFileInput waysFile,
 			OsmFileInput relationsFile, NodeDB nodeDB, Geometry boundary,
 			File logsDir, Geometry landGeometry, List<Integer> limitsNodes,

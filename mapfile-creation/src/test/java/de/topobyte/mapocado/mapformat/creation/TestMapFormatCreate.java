@@ -133,7 +133,7 @@ public class TestMapFormatCreate
 			// do nothing
 		}
 
-		MapFormatCreate task = new MapFormatCreate(output.toFile(), config,
+		MapformatCreator task = new MapformatCreator(output.toFile(), config,
 				input, input, input, nodeDB, boundary.getGeometry(),
 				logsDir.toFile(), land, limitsNodes, limitsWays,
 				limitsRelations);

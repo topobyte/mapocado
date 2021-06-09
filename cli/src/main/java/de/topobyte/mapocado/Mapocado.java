@@ -19,6 +19,7 @@ package de.topobyte.mapocado;
 
 import de.topobyte.jeography.tools.cityviewer.RunCityViewer;
 import de.topobyte.jeography.tools.cityviewer.RunStandaloneCityViewer;
+import de.topobyte.mapocado.mapformat.mapfile.CreateMapfile;
 import de.topobyte.mapocado.mapformat.mapfile.PrintIntervals;
 import de.topobyte.mapocado.mapformat.mapfile.PrintMetadata;
 import de.topobyte.mapocado.mapformat.profiling.ClassHistogramTest;
@@ -93,6 +94,7 @@ public class Mapocado
 		public ExeOptions createOptions()
 		{
 			DelegateExeOptions options = new DelegateExeOptions();
+			options.addCommand("create", CreateMapfile.class);
 			options.addCommand("print-intervals", PrintIntervals.class);
 			options.addCommand("print-metadata", PrintMetadata.class);
 

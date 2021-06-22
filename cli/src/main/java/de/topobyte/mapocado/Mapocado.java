@@ -34,6 +34,7 @@ import de.topobyte.mapocado.mapformat.profiling.disktree.TreeProfilerNonClosedAr
 import de.topobyte.mapocado.mapformat.profiling.osm.OsmStringProfiler;
 import de.topobyte.mapocado.styles.convert.RunBundleChanger;
 import de.topobyte.mapocado.styles.convert.RunStyleChanger;
+import de.topobyte.mapocado.styles.labels.RunLabelInfo;
 import de.topobyte.mapocado.styles.visualize.html.HtmlCreator;
 import de.topobyte.mapocado.swing.viewer.RunMapStyleEditor;
 import de.topobyte.mapocado.swing.viewer.RunMapViewerCompare;
@@ -79,6 +80,8 @@ public class Mapocado
 					RunStyleChanger.class);
 			options.addCommand("bundle-changer",
 					RunBundleChanger.OPTIONS_FACTORY, RunBundleChanger.class);
+			options.addCommand("label-info", RunLabelInfo.OPTIONS_FACTORY,
+					RunLabelInfo.class);
 
 			options.addCommand("mapfile", OPTIONS_FACTORY_MAPFILE);
 			options.addCommand("profiling", OPTIONS_FACTORY_PROFILING);

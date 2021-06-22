@@ -332,7 +332,12 @@ public class LabelFileHandler extends DefaultHandler
 	{
 		parsePlain(label, attributes);
 		String valImage = attributes.getValue("image");
+		String valHeight = attributes.getValue("image-height");
 		label.setImage(valImage);
+		if (valHeight != null) {
+			float height = Float.parseFloat(valHeight);
+			label.setIconHeight(height);
+		}
 	}
 
 	private LabelType parseType(String value)

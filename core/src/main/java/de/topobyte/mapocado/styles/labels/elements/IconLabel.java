@@ -37,6 +37,7 @@ public class IconLabel extends PlainLabel
 	{
 		this((PlainLabel) label);
 		image = label.image;
+		height = label.height;
 	}
 
 	public String getImage()
@@ -52,6 +53,11 @@ public class IconLabel extends PlainLabel
 	public float getIconHeight()
 	{
 		return height;
+	}
+
+	public void setIconHeight(float height)
+	{
+		this.height = height;
 	}
 
 }

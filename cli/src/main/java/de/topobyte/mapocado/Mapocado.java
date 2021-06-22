@@ -73,18 +73,9 @@ public class Mapocado
 			options.addCommand("map-style-editor",
 					RunMapStyleEditor.OPTIONS_FACTORY, RunMapStyleEditor.class);
 
-			options.addCommand("create-html", HtmlCreator.OPTIONS_FACTORY,
-					HtmlCreator.class);
-
-			options.addCommand("style-changer", RunStyleChanger.OPTIONS_FACTORY,
-					RunStyleChanger.class);
-			options.addCommand("bundle-changer",
-					RunBundleChanger.OPTIONS_FACTORY, RunBundleChanger.class);
-			options.addCommand("label-info", RunLabelInfo.OPTIONS_FACTORY,
-					RunLabelInfo.class);
-
 			options.addCommand("mapfile", OPTIONS_FACTORY_MAPFILE);
 			options.addCommand("profiling", OPTIONS_FACTORY_PROFILING);
+			options.addCommand("styles", OPTIONS_FACTORY_STYLES);
 
 			return options;
 		}
@@ -153,6 +144,27 @@ public class Mapocado
 			DelegateExeOptions options = new DelegateExeOptions();
 			options.addCommand("string-profiler", OsmStringProfiler.class);
 			options.addCommand("string-histogram", OsmStringProfiler.class);
+
+			return options;
+		}
+
+	};
+
+	public static ExeOptionsFactory OPTIONS_FACTORY_STYLES = new ExeOptionsFactory() {
+
+		@Override
+		public ExeOptions createOptions()
+		{
+			DelegateExeOptions options = new DelegateExeOptions();
+			options.addCommand("create-html", HtmlCreator.OPTIONS_FACTORY,
+					HtmlCreator.class);
+
+			options.addCommand("style-changer", RunStyleChanger.OPTIONS_FACTORY,
+					RunStyleChanger.class);
+			options.addCommand("bundle-changer",
+					RunBundleChanger.OPTIONS_FACTORY, RunBundleChanger.class);
+			options.addCommand("label-info", RunLabelInfo.OPTIONS_FACTORY,
+					RunLabelInfo.class);
 
 			return options;
 		}

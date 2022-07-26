@@ -43,7 +43,6 @@ public class CompressedBoundingBox
 	private int spanY;
 
 	public CompressedBoundingBox(BoundingBox parent, BoundingBox box)
-			throws IOException
 	{
 		int baseX = parent.getMinX();
 		int baseY = parent.getMinY();

@@ -17,7 +17,6 @@
 
 package de.topobyte.mapocado.swing.viewer;
 
-import java.awt.AWTException;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -42,8 +41,8 @@ import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
 
 import de.topobyte.jeography.viewer.core.Viewer;
-import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.styles.bundled.ConfigBundle;
 import de.topobyte.mapocado.swing.rendering.TreeLeafTileConfig;
 
@@ -207,9 +206,6 @@ public class MapViewerNook extends JPanel
 				System.out.println("take screenshot");
 				try {
 					takeScreenshot();
-				} catch (AWTException e) {
-					System.out.println("error while creating screenshot");
-					e.printStackTrace();
 				} catch (IOException e) {
 					System.out.println("error while creating screenshot");
 					e.printStackTrace();
@@ -220,7 +216,7 @@ public class MapViewerNook extends JPanel
 		}
 	}
 
-	public void takeScreenshot() throws AWTException, IOException
+	public void takeScreenshot() throws IOException
 	{
 		BufferedImage image = new BufferedImage(viewer.getWidth(),
 				viewer.getHeight(), BufferedImage.TYPE_INT_ARGB);

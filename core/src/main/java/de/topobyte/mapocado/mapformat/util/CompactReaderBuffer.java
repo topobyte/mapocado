@@ -17,7 +17,6 @@
 
 package de.topobyte.mapocado.mapformat.util;
 
-import java.io.IOException;
 import java.nio.charset.Charset;
 
 import de.topobyte.mapocado.mapformat.util.ioparam.IntResult;
@@ -34,7 +33,7 @@ public class CompactReaderBuffer
 	}
 
 	public static int readVariableLengthUnsignedInteger(byte[] buffer,
-			int offset, IntResult output) throws IOException
+			int offset, IntResult output)
 	{
 		int result = 0;
 		int shift = 0;
@@ -51,7 +50,7 @@ public class CompactReaderBuffer
 	}
 
 	public static int readVariableLengthSignedInteger(byte[] buffer, int offset,
-			IntResult output) throws IOException
+			IntResult output)
 	{
 		int result = 0;
 		int shift = 0;
@@ -87,7 +86,7 @@ public class CompactReaderBuffer
 	private static Charset charset = Charset.forName("UTF-8");
 
 	public static int readString(byte[] buffer, int offset, IntResult temp,
-			StringResult output) throws IOException
+			StringResult output)
 	{
 		offset = readVariableLengthUnsignedInteger(buffer, offset, temp);
 		int len = temp.value;
@@ -99,7 +98,7 @@ public class CompactReaderBuffer
 	}
 
 	public static int readString(byte[] buffer, int offset, int len,
-			StringResult output) throws IOException
+			StringResult output)
 	{
 		byte[] sbuffer = new byte[len];
 		System.arraycopy(buffer, offset, sbuffer, 0, len);

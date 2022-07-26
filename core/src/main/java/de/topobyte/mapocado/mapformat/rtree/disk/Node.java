@@ -17,7 +17,6 @@
 
 package de.topobyte.mapocado.mapformat.rtree.disk;
 
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -34,7 +33,7 @@ public class Node
 	final boolean isLeaf;
 	final List<Entry> entries;
 
-	public Node(boolean isLeaf, List<Entry> entries) throws IOException
+	public Node(boolean isLeaf, List<Entry> entries)
 	{
 		this.isLeaf = isLeaf;
 		this.entries = entries;

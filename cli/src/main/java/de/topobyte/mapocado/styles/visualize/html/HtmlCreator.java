@@ -22,9 +22,6 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.Options;
 import org.slf4j.Logger;
@@ -143,10 +140,6 @@ public class HtmlCreator
 
 		try {
 			htmlCreator.execute();
-		} catch (ParserConfigurationException e) {
-			e.printStackTrace();
-		} catch (TransformerException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -166,8 +159,7 @@ public class HtmlCreator
 		this.outputDirectory = outputDirectory;
 	}
 
-	private void execute() throws ParserConfigurationException,
-			TransformerException, IOException
+	private void execute() throws IOException
 	{
 		BundleExtractor extractor = new BundleExtractor(outputDirectory,
 				configBundle);

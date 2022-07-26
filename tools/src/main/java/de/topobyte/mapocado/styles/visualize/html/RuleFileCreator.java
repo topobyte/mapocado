@@ -24,9 +24,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-
 import de.topobyte.jsoup.HTML;
 import de.topobyte.jsoup.HtmlBuilder;
 import de.topobyte.jsoup.components.Body;
@@ -58,8 +55,7 @@ public class RuleFileCreator
 		this.refToClass = refToClass;
 	}
 
-	public void createRulesFile(File fileRules) throws TransformerException,
-			IOException, ParserConfigurationException
+	public void createRulesFile(File fileRules) throws IOException
 	{
 		builder = new HtmlBuilder();
 		body = builder.getBody();

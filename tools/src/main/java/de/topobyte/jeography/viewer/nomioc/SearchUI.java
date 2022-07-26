@@ -97,11 +97,7 @@ public class SearchUI extends JPanel
 			public void itemStateChanged(ItemEvent e)
 			{
 				if (e.getStateChange() == ItemEvent.SELECTED) {
-					try {
-						setPoiType((PoiTypeEntry) e.getItem());
-					} catch (SQLException e1) {
-						e1.printStackTrace();
-					}
+					setPoiType((PoiTypeEntry) e.getItem());
 				}
 			}
 		});
@@ -142,7 +138,7 @@ public class SearchUI extends JPanel
 		add(jspRoad, c);
 	}
 
-	private void setPoiType(PoiTypeEntry activeEntry) throws SQLException
+	private void setPoiType(PoiTypeEntry activeEntry)
 	{
 		this.activeEntry = activeEntry;
 		System.out.println("type: " + activeEntry);

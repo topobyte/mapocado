@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 
 import org.xml.sax.SAXException;
 
@@ -30,8 +29,8 @@ import de.topobyte.system.utils.SystemPaths;
 public class TestLabelInfo
 {
 
-	public static void main(String[] args) throws SAXException, IOException,
-			ParserConfigurationException, TransformerException
+	public static void main(String[] args)
+			throws SAXException, IOException, ParserConfigurationException
 	{
 		Path pathInput = SystemPaths.CWD.getParent().resolve(
 				"config/citymaps/rendertheme-v2/styles/default/labels.xml");

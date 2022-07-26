@@ -41,7 +41,7 @@ public class IntervalArray extends ArrayList<Integer>
 		}
 	}
 
-	public int read(FileAccess file) throws IOException, ClassNotFoundException
+	public int read(FileAccess file) throws IOException
 	{
 		long startPosition = file.getFilePointer();
 		int numIntervals = file.readUnsignedByte();

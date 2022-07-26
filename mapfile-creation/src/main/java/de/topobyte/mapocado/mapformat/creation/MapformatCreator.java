@@ -88,7 +88,8 @@ import de.topobyte.simplemapfile.xml.SmxFileWriter;
 class MapformatCreator implements OsmEntityGeometryHandler
 {
 
-	static final Logger logger = LoggerFactory.getLogger(MapformatCreator.class);
+	static final Logger logger = LoggerFactory
+			.getLogger(MapformatCreator.class);
 
 	private File outputFile;
 	private RuleSet config;

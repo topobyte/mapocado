@@ -71,9 +71,6 @@ public class Toolbar extends JToolBar
 				} catch (IOException e) {
 					System.out.println("unable to set style");
 					e.printStackTrace();
-				} catch (ClassNotFoundException e) {
-					System.out.println("unable to set style");
-					e.printStackTrace();
 				} catch (ParserConfigurationException e) {
 					System.out.println("unable to set style");
 					e.printStackTrace();

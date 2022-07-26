@@ -22,7 +22,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
 
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.Options;
@@ -57,8 +56,7 @@ public class RunLabelInfo
 	};
 
 	public static void main(String name, CommonsCliArguments arguments)
-			throws SAXException, IOException, ParserConfigurationException,
-			TransformerException
+			throws SAXException, IOException, ParserConfigurationException
 	{
 		CommandLine line = arguments.getLine();
 

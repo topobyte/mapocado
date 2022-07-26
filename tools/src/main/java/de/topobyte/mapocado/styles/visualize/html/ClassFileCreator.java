@@ -21,9 +21,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.TransformerException;
-
 import de.topobyte.chromaticity.ColorCode;
 import de.topobyte.jsoup.HTML;
 import de.topobyte.jsoup.HtmlBuilder;
@@ -53,9 +50,7 @@ public class ClassFileCreator
 
 	}
 
-	public void createClassesFile(File fileClasses)
-			throws ParserConfigurationException, TransformerException,
-			IOException
+	public void createClassesFile(File fileClasses) throws IOException
 	{
 		builder = new HtmlBuilder();
 		Body body = builder.getBody();

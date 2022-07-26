@@ -49,8 +49,8 @@ import de.topobyte.jeography.tools.cityviewer.action.SearchAction;
 import de.topobyte.jeography.tools.cityviewer.theme.Style;
 import de.topobyte.jeography.viewer.core.Viewer;
 import de.topobyte.jeography.viewer.util.ActionUtil;
-import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.styles.bundled.ConfigBundle;
 import de.topobyte.mapocado.styles.bundled.ConfigBundleReader;
 import de.topobyte.mapocado.styles.bundled.InvalidBundleException;
@@ -203,8 +203,8 @@ public class CityViewer extends JFrame
 		return configBundle;
 	}
 
-	public void setStyle(Style style) throws IOException,
-			ClassNotFoundException, ParserConfigurationException, SAXException
+	public void setStyle(Style style)
+			throws IOException, ParserConfigurationException, SAXException
 	{
 		ConfigBundle configBundle = null;
 		try {

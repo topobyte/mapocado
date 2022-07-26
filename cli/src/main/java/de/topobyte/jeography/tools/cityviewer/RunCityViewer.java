@@ -63,7 +63,6 @@ public class RunCityViewer
 	};
 
 	public static void main(String name, CommonsCliArguments arguments)
-			throws IOException
 	{
 		CommandLine line = arguments.getLine();
 

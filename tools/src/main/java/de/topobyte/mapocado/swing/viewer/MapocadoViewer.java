@@ -33,8 +33,8 @@ import org.xml.sax.SAXException;
 import de.topobyte.jeography.core.Tile;
 import de.topobyte.jeography.viewer.config.TileConfig;
 import de.topobyte.jeography.viewer.core.Viewer;
-import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.styles.bundled.ConfigBundle;
 import de.topobyte.mapocado.styles.bundled.ConfigBundleReader;
 import de.topobyte.mapocado.styles.bundled.InvalidBundleException;
@@ -138,8 +138,8 @@ public class MapocadoViewer extends Viewer
 		return imageSource.getUserScaleFactor();
 	}
 
-	public void setStyleFromTheme(Theme theme) throws IOException,
-			ClassNotFoundException, ParserConfigurationException, SAXException
+	public void setStyleFromTheme(Theme theme)
+			throws IOException, ParserConfigurationException, SAXException
 	{
 		String configFile = theme.getPath();
 
@@ -162,8 +162,7 @@ public class MapocadoViewer extends Viewer
 	}
 
 	public void setStyleFromConfigBundle(ConfigBundle configBundle)
-			throws IOException, ClassNotFoundException,
-			ParserConfigurationException, SAXException
+			throws IOException, ParserConfigurationException, SAXException
 	{
 		TileConfig config = this.getTileConfig();
 		if (!(config instanceof MapTileConfig)) {

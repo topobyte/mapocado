@@ -58,8 +58,6 @@ public class ThemeItemListener implements ItemListener
 			viewer.setStyleFromTheme(theme);
 		} catch (IOException e) {
 			System.out.println("unable to set theme: " + e.getMessage());
-		} catch (ClassNotFoundException e) {
-			System.out.println("unable to set theme: " + e.getMessage());
 		} catch (ParserConfigurationException e) {
 			System.out.println("unable to set theme: " + e.getMessage());
 		} catch (SAXException e) {

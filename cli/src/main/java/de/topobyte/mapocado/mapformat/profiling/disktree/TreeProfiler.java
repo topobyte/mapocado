@@ -31,11 +31,14 @@ import org.slf4j.LoggerFactory;
 
 import com.slimjars.dist.gnu.trove.map.hash.TIntObjectHashMap;
 
-import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.Mapfile;
+import de.topobyte.mapocado.mapformat.MapfileAccess;
 import de.topobyte.mapocado.mapformat.interval.IntervalTree;
 import de.topobyte.mapocado.mapformat.io.Metadata;
 import de.topobyte.mapocado.mapformat.model.Byteable;
+import de.topobyte.mapocado.mapformat.model.Entity;
+import de.topobyte.mapocado.mapformat.model.Node;
+import de.topobyte.mapocado.mapformat.model.Relation;
 import de.topobyte.mapocado.mapformat.model.Way;
 import de.topobyte.mapocado.mapformat.rtree.disk.DiskTree;
 import de.topobyte.mapocado.mapformat.rtree.disk.TraversalHandler;
@@ -92,20 +95,59 @@ public class TreeProfiler
 
 	private void profile() throws IOException
 	{
-		IntervalTree<Integer, DiskTree<Way>> treeWays = mapfile.getTreeWays();
+		profileNodes();
+		profileWays();
+		profileRelations();
+	}
 
-		List<Integer> intervals = treeWays.getIntervalStarts();
+	private void profileNodes() throws IOException
+	{
+		IntervalTree<Integer, DiskTree<Node>> treeNodes = mapfile
+				.getTreeNodes();
+
+		List<Integer> intervals = treeNodes.getIntervalStarts();
 		for (int i = -1; i < intervals.size(); i++) {
 			int zoom = i < 0 ? 0 : intervals.get(i);
-			System.out.println("PROFILING TREE. zoom: " + zoom);
-			DiskTree<Way> tree = treeWays.getObject(zoom);
-			WayTraversalHandler handler = new WayTraversalHandler();
+			System.out.println("PROFILING NODES TREE. zoom: " + zoom);
+			DiskTree<Node> tree = treeNodes.getObject(zoom);
+			EntityTraversalHandler handler = new EntityTraversalHandler();
 			tree.traverse(handler);
 			print(handler);
 		}
 	}
 
-	private void print(WayTraversalHandler handler)
+	private void profileWays() throws IOException
+	{
+		IntervalTree<Integer, DiskTree<Way>> treeWays = mapfile.getTreeWays();
+
+		List<Integer> intervals = treeWays.getIntervalStarts();
+		for (int i = -1; i < intervals.size(); i++) {
+			int zoom = i < 0 ? 0 : intervals.get(i);
+			System.out.println("PROFILING WAYS TREE. zoom: " + zoom);
+			DiskTree<Way> tree = treeWays.getObject(zoom);
+			EntityTraversalHandler handler = new EntityTraversalHandler();
+			tree.traverse(handler);
+			print(handler);
+		}
+	}
+
+	private void profileRelations() throws IOException
+	{
+		IntervalTree<Integer, DiskTree<Relation>> treeRelations = mapfile
+				.getTreeRelations();
+
+		List<Integer> intervals = treeRelations.getIntervalStarts();
+		for (int i = -1; i < intervals.size(); i++) {
+			int zoom = i < 0 ? 0 : intervals.get(i);
+			System.out.println("PROFILING RELATIONS TREE. zoom: " + zoom);
+			DiskTree<Relation> tree = treeRelations.getObject(zoom);
+			EntityTraversalHandler handler = new EntityTraversalHandler();
+			tree.traverse(handler);
+			print(handler);
+		}
+	}
+
+	private void print(EntityTraversalHandler handler)
 	{
 		// @formatter:off
 		System.out.println("number of inner nodes: " + handler.numberOfInnerNodes);
@@ -122,7 +164,7 @@ public class TreeProfiler
 		// @formatter:on
 	}
 
-	private class WayTraversalHandler implements TraversalHandler<Way>
+	private class EntityTraversalHandler implements TraversalHandler<Entity>
 	{
 		private int numberOfInnerNodes = 0;
 		private int numberOfInnerNodeBytes = 0;
@@ -171,7 +213,7 @@ public class TreeProfiler
 		@Override
 		public void handleEntry(
 				de.topobyte.mapocado.mapformat.rtree.disk.Entry entry,
-				Way thing, int level)
+				Entity thing, int level)
 		{
 			handleEntry(entry, thing);
 			TIntObjectHashMap<String> tags = thing.getTags();

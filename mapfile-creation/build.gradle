@@ -1,14 +1,14 @@
 eclipse.project.name = 'mapocado-mapfile-creation'
 
 dependencies {
-    compile project(':mapocado-core')
+    api project(':mapocado-core')
 
-    compile 'de.topobyte:osm4j-core:1.2.0'
-    compile 'de.topobyte:osm4j-geometry:1.2.0'
-    compile 'de.topobyte:osm4j-utils:1.2.0'
-    compile 'de.topobyte:osm4j-incubating:1.2.0'
+    api 'de.topobyte:osm4j-core:1.2.0'
+    api 'de.topobyte:osm4j-geometry:1.2.0'
+    api 'de.topobyte:osm4j-utils:1.2.0'
+    api 'de.topobyte:osm4j-incubating:1.2.0'
 
-    compile 'de.topobyte:simple-mapfile-xml:0.1.0'
+    api 'de.topobyte:simple-mapfile-xml:0.1.0'
 
-    testCompile 'de.topobyte:system-utils:0.0.1'
+    testImplementation 'de.topobyte:system-utils:0.0.1'
 }

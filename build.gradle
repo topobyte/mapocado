@@ -1,5 +1,5 @@
 wrapper {
-    gradleVersion = '5.2.1'
+    gradleVersion = '7.6.1'
 }
 
 allprojects {
@@ -12,12 +12,28 @@ configure(project(':mapocado-mapfile-creation')) {
     version = '0.3.0'
 }
 
+ext.libraries = [
+    project(':mapocado-core'),
+    project(':mapocado-android'),
+    project(':mapocado-swing'),
+    project(':mapocado-mapfile-creation'),
+    project(':mapocado-tools'),
+]
+
+configure(libraries) {
+    apply plugin: 'java-library'
+    apply plugin: 'maven-publish'
+}
+
+configure(subprojects.findAll {it !in libraries}) {
+    apply plugin: 'java'
+}
+
 subprojects {
     task allDeps(type: DependencyReportTask) {}
 
     apply plugin: 'java'
     apply plugin: 'eclipse'
-    apply plugin: 'maven'
 
     repositories {
         maven {
@@ -59,21 +75,20 @@ subprojects {
         }
     }
 
-    afterEvaluate { project ->
-        if (publish) {
-            uploadArchives {
-                repositories {
-                    mavenDeployer {
-                        pom.project {
-                            name pomInfo.name
-                            description pomInfo.description
-                            url pomInfo.url
-                            licenses {
-                                license {
-                                    name pomInfo.licenseName
-                                    url pomInfo.licenseUrl
-                                    distribution pomInfo.licenseDistribution
-                                }
+    if (publish) {
+        publishing {
+            publications {
+                maven(MavenPublication) {
+                    from components.java
+                    pom {
+                        name = "$pomInfo.name"
+                        description = "$pomInfo.description"
+                        url = "$pomInfo.url"
+                        licenses {
+                            license {
+                                name = "$pomInfo.licenseName"
+                                url = "$pomInfo.licenseUrl"
+                                distribution = "$pomInfo.licenseDistribution"
                             }
                         }
                     }

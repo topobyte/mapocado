@@ -30,7 +30,6 @@ import java.awt.font.GlyphVector;
 import java.awt.geom.AffineTransform;
 import java.io.IOException;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
@@ -110,18 +109,12 @@ public class DbNodePainter implements PaintListener, NodePainter
 	{
 		this.connection = connection;
 
-		try {
-			renderConfig = new RenderConfig(mapRenderConfig, connection);
-		} catch (SQLException e) {
-			logger.error(
-					"Error while initializing rendering config from database",
-					e);
-		}
+		renderConfig = new RenderConfig(mapRenderConfig, connection);
 
 		try {
 			JdbcConnection db = new JdbcConnection(connection);
 			spatialIndex = new SpatialIndex(db, "si_pois");
-		} catch (SQLException | QueryException e) {
+		} catch (QueryException e) {
 			logger.error("Error while opening poi spatial index", e);
 		}
 
@@ -209,7 +202,7 @@ public class DbNodePainter implements PaintListener, NodePainter
 		try {
 			executeQuery(bbox, dbIds, zoom, ruleShapeSetNodesCaptions,
 					ruleShapeSetNodesSymbols);
-		} catch (SQLException | QueryException e) {
+		} catch (QueryException e) {
 			logger.warn("Error while executing labels query", e);
 		}
 
@@ -403,7 +396,7 @@ public class DbNodePainter implements PaintListener, NodePainter
 	private void executeQuery(BBox request, TIntList dbIds, int zoom,
 			RuleShapeMap<RenderElement, Node> ruleShapeSetNodesCaptions,
 			RuleShapeMap<RenderElement, Node> ruleShapeSetNodesSymbols)
-			throws SQLException, QueryException
+			throws QueryException
 	{
 		final TIntObjectMap<String> typeNames = new TIntObjectHashMap<>();
 		IConnection connex = new JdbcConnection(connection);

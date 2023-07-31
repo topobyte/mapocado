@@ -18,7 +18,6 @@
 package de.topobyte.mapocado.swing.rendering.labels;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -79,7 +78,6 @@ public class RenderConfig
 	private final Map<RenderClass, String> classToType = new HashMap<>();
 
 	public RenderConfig(MapRenderConfig mapRenderConfig, Connection connection)
-			throws SQLException
 	{
 		this.mapRenderConfig = mapRenderConfig;
 

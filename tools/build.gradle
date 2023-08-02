@@ -3,7 +3,7 @@ dependencies {
     api project(':mapocado-swing')
 
     api 'de.topobyte:collections-utils:0.0.5'
-    api 'de.topobyte:jsoup-utils:0.2.0'
+    api 'de.topobyte:jsoup-utils:0.2.1'
     api 'de.topobyte:general-map-utils:0.0.3'
     api 'de.topobyte:nomioc-luqe:0.2.0'
     api 'commons-io:commons-io:2.13.0'

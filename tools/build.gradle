@@ -2,11 +2,13 @@ dependencies {
     api project(':mapocado-core')
     api project(':mapocado-swing')
 
-    api 'de.topobyte:jeography-gis:0.2.0'
     api 'de.topobyte:collections-utils:0.0.5'
     api 'de.topobyte:jsoup-utils:0.2.0'
     api 'de.topobyte:general-map-utils:0.0.3'
     api 'de.topobyte:nomioc-luqe:0.1.0'
+    api 'commons-io:commons-io:2.13.0'
+
+    runtimeOnly 'org.xerial:sqlite-jdbc:3.8.11.2'
 
     testRuntimeOnly 'org.slf4j:slf4j-log4j12:1.6.1'
     testRuntimeOnly 'log4j:log4j:1.2.16'

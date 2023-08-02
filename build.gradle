@@ -4,12 +4,12 @@ wrapper {
 
 allprojects {
     group = 'de.topobyte'
-    version = '0.3.0'
+    version = '0.4.0'
 }
 
 // keeping this here as an example
 configure(project(':mapocado-mapfile-creation')) {
-    version = '0.3.0'
+    version = '0.4.0'
 }
 
 ext.libraries = [

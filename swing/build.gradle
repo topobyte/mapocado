@@ -1,11 +1,11 @@
 dependencies {
     api project(':mapocado-core')
 
-    api 'de.topobyte:jeography-tools:0.2.0'
-    api 'de.topobyte:mercator-image:0.1.0'
+    api 'de.topobyte:jeography-tools:0.3.0'
+    api 'de.topobyte:mercator-image:0.2.0'
     api 'de.topobyte:jsi-rectangle-intersection-tester:0.0.1'
     api 'de.topobyte:bvg-awt:0.1.0'
-    api 'de.topobyte:nomioc-luqe:0.1.0'
+    api 'de.topobyte:nomioc-luqe:0.2.0'
     api 'de.topobyte:luqe-jdbc:0.4.0'
     api 'com.slimjars.trove4j:trove4j-int-int-hash-map:1.0.1'
     api 'com.slimjars.trove4j:trove4j-hash-map:1.0.1'

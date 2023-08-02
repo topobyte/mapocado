@@ -2,7 +2,7 @@ dependencies {
     implementation project(':mapocado-tools')
     implementation project(':mapocado-mapfile-creation')
 
-    implementation 'de.topobyte:osm4j-tbo:1.2.0'
+    implementation 'de.topobyte:osm4j-tbo:1.3.0'
     implementation 'de.topobyte:commons-cli-helper:0.1.0'
     implementation 'de.topobyte:guava-utils:0.0.2'
 

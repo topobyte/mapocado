@@ -3,7 +3,7 @@ dependencies {
 
     api 'de.topobyte:collections-utils:0.0.5'
     api 'de.topobyte:android-misc-utils:0.0.1'
-    api 'de.topobyte:android-map-tile-manager:0.1.0'
+    api 'de.topobyte:android-map-tile-manager:0.2.0'
     api 'de.topobyte:bvg-android:0.1.0'
     api 'com.google.android:android:4.1.1.4'
 }
